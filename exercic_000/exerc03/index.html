@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../../../storage_images/encode/icon_encode.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Análise de Números</title>
+</head>
+
+<!-- 
+[x]-CRIAR UM CAMPO PARA RECEBER VALORES DE 1 A 100, VALIDAR PARA NÃO RECEBER OUTROS VALORES
+[x]-CRIAR BOTÃO PARA ADICIONAR VALOR A UMA LISTA, VALIDAR SE O CAMPO NÃO ESTÁ VAZIO
+[x]-LISTAR OS VALORES EM UM CAMPO OU LOGO ABAIXO
+[x]-CRIAR UM BOTÃO PARA FINALIZAR, QUANDO FINALIZAR DEVERÁ CALCULAR QUANTIDADE DE NROS. LISTADOS, MOSTRAR O MENOR NRO, O MAIOR NRO, A SOMA DE TODOS E A MÉDIA
+ -->
+
+<body>
+
+    <header>
+        <div>
+            <p>
+                <h1>Analisador de Números</h1>
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <section id="sSecPag">
+            <div>
+                <p>
+                    Número entre (1 e 100):
+                    <input type="text" name="nValInf" id="nValInf" size="5px" maxlength="3">
+                    <input type="button" value="Adicionar" id="btValor" onclick="fAdiciona()">
+                </p>
+            </div><br>
+
+            <div>
+
+                <p>Lista de Números:</p>
+
+                <p id="sLstNum"></p><br>
+
+                <p><input type="button" value="Finalizar" id="btFinal" onclick="fFinal()"></p>
+
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <p>
+                <h6>&copy; Encode Tech - Copyright by ENCODE © - 2021</h6>
+            </p>
+        </div>
+    </footer>
+
+    <script src="jscript.js"></script>
+
+</body>
+
+</html>

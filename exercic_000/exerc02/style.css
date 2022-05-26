@@ -1,0 +1,126 @@
+      body {
+         color: #ffffff;
+         font-size: 1em;
+         font-weight: normal;
+         background-color: #8dd17c;
+         font-family: Arial, Helvetica, sans-serif;
+      }
+
+      header {
+         text-align: center;
+         background-color: #f1bb08;
+      }
+
+      footer {
+         margin-top: 50px;
+         text-align: center;
+         background-color: #f1bb08;
+         /*
+         padding: 1px;
+         box-shadow: 10px 10px 10px 5px #777228;
+         */
+      }
+
+      main {
+         width: 500px;
+         margin: auto;
+         padding: 15px;
+         border-radius: 15px;
+         box-shadow: 10px 10px 10px #74e9f8;
+         background-color: #2d7ee7;
+      }
+
+      h1 {
+         color: #4e4615;
+         font-size: 2.5em;
+         font-style: normal;
+         font-weight: bold;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      h2 {
+         color: #4e4615;
+         font-size: 2em;
+         font-style: normal;
+         font-weight: normal;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      h3 {
+         color: #4e4615;
+         font-size: 1.5em;
+         font-style: normal;
+         font-weight: normal;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      h4 {
+         color: #4e4615;
+         font-size: 1em;
+         font-style: normal;
+         font-weight: normal;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      h5 {
+         color: #4e4615;
+         font-size: 0.8em;
+         font-style: normal;
+         font-weight: normal;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      h6 {
+         color: #4e4615;
+         font-size: 0.8em;
+         font-style: normal;
+         font-weight: bold;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+
+      /*===================== elementos ID ==========================*/
+      input#AnoInf {
+         font-size: 1em;
+         font-weight: 800;
+         font-family: Arial, Helvetica, sans-serif;
+      }
+
+      input#FemSex,
+      input#MasSex {
+         width: 20px;
+         height: 15px;
+      }
+
+      input#btn002 {
+         padding: 13px;
+         font-size: 1em;
+         font-weight: 800;
+         color: #1d0fe9;
+         border-radius: 13px;
+         background-color: #4feef3;
+         box-shadow: 2px 2px 5px #00f7ff;
+         font-family: Arial, Helvetica, sans-serif;
+      }
+
+
+      div#sHraTit {
+         margin: 15px;
+         width: 500px;
+         height: 50px;
+         /*color: #d5e72d;*/
+         font: normal 20px Arial;
+         text-align: center;
+         /*
+         line-height: 150px;
+         background-color: #ff3c00;
+         */
+      }
+
+      div#btn001,
+      div#img001,
+      div#msg001 {
+         text-align: center;
+      }
+
+      /*===================== elementos CLASS ==========================*/

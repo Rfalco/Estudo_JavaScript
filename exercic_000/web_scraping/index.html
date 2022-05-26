@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Scraping</title>
+</head>
+
+<body>
+
+    <style>
+        .container {
+            display: flex;
+            gap: .4rem;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        li img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+
+    <main>
+        <div class="container">
+
+            <li><img
+                    src="https://scontent-gru1-2.cdninstagram.com/v/t51.2885-15/275508434_143187901522916_4840032875581414849_n.jpg?stp=c0.135.1080.1080a_dst-jpg_e35_s640x640_sh0.08&_nc_ht=scontent-gru1-2.cdninstagram.com&_nc_cat=108&_nc_ohc=X8zh3k4XOPsAX8Mu04x&edm=ABfd0MgBAAAA&ccb=7-4&oh=00_AT85wCA9jZcZ921GkZCnk-cxFamjFp7bodv6fR50B_B6Xg&oe=6230F91A&_nc_sid=7bff83">
+            </li>
+            <li><img
+                    src="https://scontent-gru2-2.cdninstagram.com/v/t51.2885-15/275454771_680449016496546_9015593283254180023_n.jpg?stp=c0.135.1080.1080a_dst-jpg_e35_s640x640_sh0.08&_nc_ht=scontent-gru2-2.cdninstagram.com&_nc_cat=106&_nc_ohc=mtZCv-rFGC4AX9xRFNE&edm=ABfd0MgBAAAA&ccb=7-4&oh=00_AT-k6kHzSazjchJYD92voIP11Q6wYaLuRO9xzyXFpVHqMA&oe=62302750&_nc_sid=7bff83">
+            </li>
+            <li><img
+                    src="https://scontent-gru1-2.cdninstagram.com/v/t51.2885-15/275448843_3272137556402127_1029054978606985738_n.jpg?stp=c0.135.1080.1080a_dst-jpg_e35_s640x640_sh0.08&_nc_ht=scontent-gru1-2.cdninstagram.com&_nc_cat=103&_nc_ohc=FGL8Eyu3ivIAX-COoVc&edm=ABfd0MgBAAAA&ccb=7-4&oh=00_AT-0LjjXOYrDLYAIowkPznJC6WjkxL5yWqxX4eIqwQ1U_g&oe=6231EC61&_nc_sid=7bff83">
+            </li>
+            <li><img
+                    src="https://scontent-gru1-1.cdninstagram.com/v/t51.2885-15/275479871_702416614106509_2279709885403313152_n.jpg?stp=c0.179.1440.1440a_dst-jpg_e35_s640x640_sh0.08&_nc_ht=scontent-gru1-1.cdninstagram.com&_nc_cat=101&_nc_ohc=wKSC-F6dO-cAX9l60_W&edm=ABfd0MgBAAAA&ccb=7-4&oh=00_AT_ELZVr4cqBPzV32bWQYNio562mJNMeYIozO0j8NDYagQ&oe=62320EA9&_nc_sid=7bff83">
+            </li>
+            <li><img
+                    src="https://scontent-gru1-1.cdninstagram.com/v/t51.2885-15/275336851_1107804100001677_3965715336876455573_n.jpg?stp=c0.135.1080.1080a_dst-jpg_e35_s640x640_sh0.08&_nc_ht=scontent-gru1-1.cdninstagram.com&_nc_cat=101&_nc_ohc=TjIFzxD699AAX-6s1JF&edm=ABfd0MgBAAAA&ccb=7-4&oh=00_AT-gFaBATyyPLyIs2-OZz4ZbwIemhwmI-TACw8z8CBnzhg&oe=62320404&_nc_sid=7bff83">
+            </li>
+            <li><img
+                    src="https://scontent-gru2-2.cdninstagram.com/v/t51.2885-15/275398780_504763624445894_4946349549938173222_n.jpg?stp=c0.179.1440.1440a_dst-jpg_e35_s640x640_sh0.08&_nc_ht=scontent-gru2-2.cdninstagram.com&_nc_cat=102&_nc_ohc=KCe4awXpXUMAX9Jc_hW&edm=ABfd0MgBAAAA&ccb=7-4&oh=00_AT8vL6YaTYohbMRCT2urskhOORAUeFP98ZuZd5br5fhSdQ&oe=6231B193&_nc_sid=7bff83">
+            </li>
+            <li><img
+                    src="https://scontent-gru1-1.cdninstagram.com/v/t51.2885-15/275454974_105789168726541_665967454799774379_n.jpg?stp=c0.135.1080.1080a_dst-jpg_e35_s640x640_sh0.08&_nc_ht=scontent-gru1-1.cdninstagram.com&_nc_cat=101&_nc_ohc=fF-uALhYghsAX9JrirU&edm=ABfd0MgBAAAA&ccb=7-4&oh=00_AT_jcW6wUKRddJzo2kAuuL3uAzDYd4WWyVvE5wmW5NnsGw&oe=6231F2D3&_nc_sid=7bff83">
+            </li>
+            <li><img
+                    src="https://scontent-gru1-1.cdninstagram.com/v/t51.2885-15/275408014_497016465198898_2884871297342978876_n.jpg?stp=c0.135.1080.1080a_dst-jpg_e35_s640x640_sh0.08&_nc_ht=scontent-gru1-1.cdninstagram.com&_nc_cat=110&_nc_ohc=2ckto6Al3D0AX845fup&edm=ABfd0MgBAAAA&ccb=7-4&oh=00_AT9zr_FgE2UG_gWUTaZWHyz3aY1LAUqGVnUf2WLr6Mp_CA&oe=62321241&_nc_sid=7bff83">
+            </li>
+            <li><img
+                    src="https://scontent-gru2-2.cdninstagram.com/v/t51.2885-15/275277280_501010541745287_5966813615126375751_n.jpg?stp=c0.135.1080.1080a_dst-jpg_e35_s640x640_sh0.08&_nc_ht=scontent-gru2-2.cdninstagram.com&_nc_cat=111&_nc_ohc=4tebOLVRmDkAX8KNa6j&edm=ABfd0MgBAAAA&ccb=7-4&oh=00_AT8SgtZLttOr3rIt4MdjCdP1EvSt022TFpaNx9DumItQXg&oe=6231EB14&_nc_sid=7bff83">
+            </li>
+            <li><img
+                    src="https://scontent-gru2-1.cdninstagram.com/v/t51.2885-15/275313711_697943601576223_5160821671053056025_n.jpg?stp=c0.135.1080.1080a_dst-jpg_e35_s640x640_sh0.08&_nc_ht=scontent-gru2-1.cdninstagram.com&_nc_cat=107&_nc_ohc=gSunqQhIVp4AX-51C5Z&edm=ABfd0MgBAAAA&ccb=7-4&oh=00_AT_Eh1AMTpSWnatXhMDsT7AHwOka55DGqtFytpWzVy2R2w&oe=623177C6&_nc_sid=7bff83">
+            </li>
+            <li><img
+                    src="https://scontent-gru2-2.cdninstagram.com/v/t51.2885-15/275232904_116011067685803_8694210726626885176_n.jpg?stp=c0.135.1080.1080a_dst-jpg_e35_s640x640_sh0.08&_nc_ht=scontent-gru2-2.cdninstagram.com&_nc_cat=111&_nc_ohc=EIvt3RlocZQAX_9DVCh&edm=ABfd0MgBAAAA&ccb=7-4&oh=00_AT8yiiUBrVSRaGkaR7sybPcbTzAyo1yubShihhEuFYG8ug&oe=62312ACD&_nc_sid=7bff83">
+            </li>
+            <li><img
+                    src="https://scontent-gru2-2.cdninstagram.com/v/t51.2885-15/275264867_692956951848030_7984104357944211635_n.jpg?stp=c0.180.1440.1440a_dst-jpg_e35_s640x640_sh0.08&_nc_ht=scontent-gru2-2.cdninstagram.com&_nc_cat=106&_nc_ohc=np_TZOAg56YAX-NGJ61&edm=ABfd0MgBAAAA&ccb=7-4&oh=00_AT-8_im1db2I7--HRtEFTc1vC_kqSokdWx84WppFyMi67w&oe=6231147B&_nc_sid=7bff83">
+            </li>
+
+            <li><img src="https://scontent-gru2-2.cdninstagram.com/v/t51.2885-15/275264867_692956951848030_7984104357944211635_n.jpg?stp=c0.180.1440.1440a_dst-jpg_e35_s640x640_sh0.08&_nc_ht=scontent-gru2-2.cdninstagram.com&_nc_cat=106&_nc_ohc=np_TZOAg56YAX-NGJ61&edm=ABfd0MgBAAAA&ccb=7-4&oh=00_AT-8_im1db2I7--HRtEFTc1vC_kqSokdWx84WppFyMi67w&oe=6231147B&_nc_sid=7bff83"
+                    alt=""></li>
+
+        </div>
+    </main>
+
+    <script>
+        (async () => {
+            /// ABERTURA DO ARQUIVO DE DADOS (JSON)
+            const response = await fetch('./instagram.json');
+            const data = await response.json();
+
+            /// FORMATAR OS DADOS PARA HTML
+            const htmlList = data.map(({
+                src
+            }) => `<li><img src="${src}"></li>`).join('');
+
+            // console.log(htmlList);
+
+            /// EXIBIR NO HTML
+            document.querySelector('.container').innerHTML = htmlList;
+        })();
+
+
+        const getBase64Image = async (url) => {
+            return new Promise((resolve, reject) => {
+                // Safety net so the entire up
+                // doesn't fucking crash
+                if (!url) {
+                    resolve(null);
+                }
+                https
+                    .get(url, (resp) => {
+                        resp.setEncoding("base64");
+                        body = "data:" + resp.headers["content-type"] + ";base64,";
+                        resp.on("data", (data) => {
+                            body += data;
+                        });
+                        resp.on("end", () => {
+                            resolve(body);
+                        });
+                    })
+                    .on("error", (e) => {
+                        reject(e.message);
+                    });
+            });
+        };
+    </script>
+</body>
+
+</html>

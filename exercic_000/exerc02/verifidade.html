@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <link rel="shortcut icon" href="../../../storage_images/encode/icon_encode.ico" type="image/x-icon">
+   <link rel="stylesheet" href="style.css">
+
+   <script src="jscript.js"></script>
+
+   <title>Verifica Idade</title>
+</head>
+
+<body>
+
+   <header>
+      <div>
+         <p>
+         <h1>Verificador de Idade</h1>
+         </p>
+      </div>
+   </header>
+
+   <main>
+      <section>
+         <div id="inf001">
+            <p>Ano de Nascimento: <input type="number" id="AnoInf" name="sAnoInf" min="1800" max="3000"></p>
+            <p>
+               Sexo:
+               <input type="radio" id="FemSex" name="sInfSex" value="FEM"><label for="FemSex">Feminino</label>
+               <input type="radio" id="MasSex" name="sInfSex" value="MAS"><label for="MasSex">Masculino</label>
+            </p>
+         </div>
+         <div id="btn001">
+            <p><input id="btn002" type="button" value="Verificar" onclick="fVerif_1()"></p>
+         </div>
+         <div id="msg001">
+            <p><span id="MsgInf">Preencha os dados acima para ver o resultado!</span></p>
+         </div>
+         <div id="img001">
+            <p><span id="ImgInf"></span></p>
+         </div>
+      </section>
+   </main>
+
+   <footer>
+      <div>
+         <p>
+         <h6>&copy; Encode Tech - Copyright by ENCODE © - 2021</h6>
+         </p>
+      </div>
+   </footer>
+
+</body>
+
+</html>

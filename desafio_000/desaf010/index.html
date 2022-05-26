@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="../../../storage_images/encode/icon_encode.ico" type="image/x-icon">
+   <title>Bhaskara</title>
+
+   <style>
+      body {
+         color: #40e0d0;
+         background-color: #63261b;
+         font-family: 'Courier New', Courier, monospace;
+      }
+
+      h1 {
+         color: #eef7a2;
+         font-size: 1.2em;
+         background-color: #c40808;
+         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      }
+
+      h6 {
+         padding: 15px;
+         color: #eef7a2;
+         text-align: center;
+         font-size: 1.2em;
+         background-color: #c40808;
+         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      }
+
+      button {
+         padding: 15px;
+         color: #864f06;
+         font-size: 1.2em;
+         background-color: #088fc4;
+         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+         box-shadow: 5px 5px 5px #088fc4;
+      }
+
+      #sTxtPri {
+         margin-right: 400px;
+      }
+   </style>
+</head>
+
+<body>
+
+   <header>
+      <div>
+         <p>
+         <h1>Resolvendo Bhaskara</h1>
+         </p>
+      </div>
+   </header>
+
+   <main>
+      <section>
+         <div>
+            <p><button id="btn001" onclick="fCalc()">Calcular</button></p>
+         </div>
+         <div id="sTxtPri">
+            <p><span id="sTxtTit">
+                  Considerando a equação no formato <strong><em>ax<sup>2</sup> + bx + c = 0</em></strong>, aperte o
+                  botão
+                  acima para calcular o valor de <strong>&#916; (Delta)</strong>
+               </span></p>
+            <p><span id="sTxt001"></span></p>
+            <p><span id="sTxt002"></span></p>
+            <p><span id="sTxt003"></span></p>
+         </div>
+      </section>
+   </main>
+
+   <footer>
+      <div>
+         <p>
+         <h6>Desafio 010 - PDF</h6>
+         </p>
+      </div>
+   </footer>
+
+   <script>
+      function fCalc() {
+
+         let sTxtTit = document.getElementById('sTxtTit')
+         let sTxtLn1 = document.getElementById('sTxt001')
+         let sTxtLn2 = document.getElementById('sTxt002')
+         let sTxtLn3 = document.getElementById('sTxt003')
+
+         let nVal__A = window.prompt('Qual é o valor de a?')
+         let nVal__B = window.prompt('Qual é o valor de b?')
+         let nVal__C = window.prompt('Qual é o valor de c?')
+         let nCalc01 = (nVal__B * nVal__B) - (4 * (nVal__A * nVal__C))
+
+         sTxtTit.innerHTML = 'Resolvendo Bhaskara'
+         sTxtLn1.innerHTML = `A equação atual é ${nVal__A}x<sup>2</sup> + ${nVal__B}x + ${nVal__C} = 0`
+         sTxtLn2.innerHTML = `O cálculo realizado será &#916; = ${nVal__B}<sup>2</sup> - 4 . ${nVal__A} . ${nVal__C}`
+         sTxtLn3.innerHTML = `O valor caulculado foi &#916; = ${nCalc01}`
+
+         sTxtTit.style.fontFamily = 'Arial'
+         sTxtLn1.style.fontFamily = 'Arial'
+         sTxtLn2.style.fontFamily = 'Arial'
+         sTxtLn3.style.fontFamily = 'Arial'
+         sTxtTit.style.fontSize = '2em'
+         sTxtLn1.style.fontSize = '1.2em'
+         sTxtLn2.style.fontSize = '1.2em'
+         sTxtLn3.style.fontSize = '1.2em'
+
+      }
+   </script>
+
+</body>
+
+</html>

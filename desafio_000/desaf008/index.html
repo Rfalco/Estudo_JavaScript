@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="../../../storage_images/encode/icon_encode.ico" type="image/x-icon">
+   <title>Desconto</title>
+
+   <style>
+      body {
+         color: #a59af0;
+         background-color: #708090;
+         font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      h1 {
+         color: #066969;
+         font-weight: bold;
+         font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      h6 {
+         color: #fa5133;
+         font-style: italic;
+         font-weight: bold;
+         font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      button {
+         padding: 30px;
+         color: wheat;
+         background-color: #bb3b24;
+         box-shadow: 5px 5px 5px #eea3c9;
+      }
+   </style>
+
+
+</head>
+
+<body>
+
+   <header>
+      <div>
+         <p>
+         <h1>Calcular Desconto</h1>
+         </p>
+      </div>
+   </header>
+
+   <main>
+      <section>
+         <div>
+            <p><button id="btn001" onclick="fDesc()">Desconto de 10%</button></p>
+         </div>
+         <div>
+            <p><span id="sTxtTit">Clique no botão acima para iniciar.</span></p>
+            <p><span id="sTxtPre"></span></p>
+            <p><span id="sTxtDsc"></span></p>
+            <p><span id="sTxtFim"></span></p>
+         </div>
+      </section>
+   </main>
+
+   <footer>
+      <div>
+         <p>
+         <h6>Desafio 007 - PDF</h6>
+         </p>
+      </div>
+   </footer>
+
+   <script>
+      function fDesc() {
+
+         let oTxtTit = document.getElementById('sTxtTit')
+         let oTxtPre = document.getElementById('sTxtPre')
+         let oTxtDsc = document.getElementById('sTxtDsc')
+         let oTxtFim = document.getElementById('sTxtFim')
+         let oBtnRes = document.getElementById('btn001')
+
+         let sNomPrd = window.prompt('Qual o produto você está comprando?')
+         let nValPrd = window.prompt(`Qual o valor do(a) ${sNomPrd}?`)
+         nValNum = Number(nValPrd.replace(',', '.'))
+         let nValDsc = (nValNum * 0.10).toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})
+         let nValFim = (nValNum - (nValNum * 0.10)).toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})
+
+         oTxtTit.style.fontFamily = 'Times new Roman'
+         oTxtTit.style.color = '#ffff00'
+         oTxtTit.style.fontSize = '2em'
+         oTxtTit.innerHTML = `Calculando desconto de 10% para ${sNomPrd}`
+         oTxtPre.innerHTML = `O preço original era ${nValNum.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}`
+         oTxtDsc.innerHTML = `Você acaba de ganhar ${nValDsc} de desconto (-10%).`
+         oTxtFim.innerHTML = `No fim, você vai pagar ${nValFim} no produto ${sNomPrd}.`
+
+      }
+   </script>
+
+</body>
+
+</html>

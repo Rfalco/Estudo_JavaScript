@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="../../../storage_images/encode/icon_encode.ico" type="image/x-icon">
+   <title>Calcula Troco</title>
+
+   <style>
+      body {
+         color: #dc143c;
+         background-color: #00ffff;
+         font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      h1 {
+         color: #00008b;
+         font-size: 2em;
+         font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+
+      h6 {
+         color: #ff8c00;
+         font-size: 1.5em;
+         font-family: monospace;
+      }
+
+      button {
+         color: darkred;
+         font-size: 2em;
+         background-color: darkseagreen;
+         font-family: cursive;
+         padding: 30px;
+         font-weight: bold;
+         box-shadow: 5px 5px 5px #00ff00;
+      }
+   </style>
+
+</head>
+
+<body>
+
+   <header>
+      <div>
+         <p>
+         <h1>Calculando o Troco</h1>
+         </p>
+      </div>
+   </header>
+
+   <main>
+      <section>
+         <div>
+            <p><button id="btn001" onclick="fClicou()">Comprar produto</button></p>
+         </div>
+      </section>
+   </main>
+
+   <footer>
+      <div>
+         <p>
+         <h6>Desafio 004 - PDF</h6>
+         </p>
+      </div>
+   </footer>
+
+   <script>
+
+      function fClicou() {
+
+         let sNomPrd = window.prompt('Qual produto desaja compra?')
+         let nValPrd = window.prompt('Quanto custa o produto que você está comprando?')
+         let nValPag = window.prompt('Qual o valor que você deu para pagar ' + sNomPrd + '?')
+         let nVal001 = Number(nValPrd)
+         let nVal002 = Number(nValPag)
+         let nTroco = nVal002 - nVal001
+         let sMsgRes = `Você comprou ${sNomPrd} que custou ${nVal001.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}. \n`
+         sMsgRes += `Deu ${nVal002.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })} em dinheiro `
+         sMsgRes += `e vai receber ${nTroco.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })} de troco.`
+
+         window.alert(sMsgRes)
+
+      }
+
+   </script>
+
+</body>
+
+</html>

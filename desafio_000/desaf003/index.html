@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="../../../storage_images/encode/icon_encode.ico" type="image/x-icon">
+   <title>Antes e Depois</title>
+
+   <style>
+      body {
+         color: #034747;
+         background-color: #00ffff;
+         font-family: Arial, Helvetica, sans-serif;
+      }
+
+      h1 {
+         color: #050592;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      h6 {
+         color: #4d068f;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      button {
+         padding: 30px;
+         color: #6495ed;
+         background-color: #fff8dc;
+         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+         box-shadow: 5px 5px 5px #ffff00;
+      }
+   </style>
+
+</head>
+
+<body>
+
+   <header>
+      <div>
+         <p>
+         <h1>Antes e Depois</h1>
+         </p>
+      </div>
+   </header>
+
+   <main>
+      <section>
+         <div>
+            <p><button id="btn001" onclick="fClicou()">Antecessor e Sucessor</button></p>
+         </div>
+      </section>
+   </main>
+
+   <footer>
+      <div>
+         <p>
+         <h6>Desafio 003 - PDF</h6>
+         </p>
+      </div>
+   </footer>
+
+   <script>
+
+      /* caracteres especiais para utilizar dentro do JAVASCRIPT
+      \b - backspace
+      \f - form feed
+      \n - new line
+      \r - carriage return
+      \t - Tabulação horizontal
+      \v - tabulação vertical
+      \' - aspas simples
+      \" - aspas duplas
+      \\ - barra invertida
+      \XXX - caractere no formato Latin-1 (XXX é um valor octal entre 0 e 377)
+      \xXX - caractere no formato Latin-1 (XX é um valor hexadecimal entre 00 e FF)
+      \uXXXX - caractere no formato Unicode, especificado por um valor hexadecimal de 4 dígitos. 
+      O navegador deve suportar Unicode e o sist.op. deve ter as fontes instaladas para que os caracteres sejam visualizados.
+      */
+
+
+      function fClicou() {
+         let nNumInf = window.prompt('Digite um número inteiro qualquer: ')
+         let oBtnSet = document.getElementById('btn001')
+         let sRes = 'O número digitado foi ' + nNumInf + ', \n o seu antecessor é ' + (Number(nNumInf) - 1) + ', \n e seu sucessor é ' + (Number(nNumInf) + 1) + '.'
+
+         window.alert(sRes)
+         oBtnSet.innerHTML = 'Clicou!'
+         oBtnSet.style.color = '#ff0000'
+         oBtnSet.style.backgroundColor = '#0000ff'
+         oBtnSet.style.boxShadow = '5px 5px 5px #00ff00'
+      }
+   </script>
+
+</body>
+
+</html>

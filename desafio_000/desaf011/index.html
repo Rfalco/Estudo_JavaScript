@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="../../../storage_images/encode/icon_encode.ico" type="image/x-icon">
+   <title>Ano Bissexto</title>
+
+   <style>
+      body {
+         color: #00ffff;
+         font-style: normal;
+         background-color: #000000;
+         font-family: 'Courier New', Courier, monospace;
+      }
+
+      header {
+         text-align: center;
+      }
+
+      footer {
+         padding: 1px;
+         text-align: center;
+         background-color: darkblue;
+      }
+
+      h1 {
+         color: #7fff00;
+         font-size: 2.5em;
+         font-style: normal;
+         font-weight: bold;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      h2 {
+         color: #7fff00;
+         font-size: 2em;
+         font-style: normal;
+         font-weight: normal;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      h3 {
+         color: #7fff00;
+         font-size: 1.5em;
+         font-style: normal;
+         font-weight: normal;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      h4 {
+         color: #7fff00;
+         font-size: 1em;
+         font-style: normal;
+         font-weight: normal;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      h5 {
+         color: #7fff00;
+         font-size: 0.8em;
+         font-style: normal;
+         font-weight: normal;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      h6 {
+         color: #7fff00;
+         font-size: 0.5em;
+         font-style: normal;
+         font-weight: bold;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      button {
+         padding: 15px;
+         color: #ff7f50;
+         font-weight: 800;
+         font-size: 2em;
+         background-color: #00008b;
+         box-shadow: 5px 5px 5px #00ffff;
+         font-family: Arial, Helvetica, sans-serif;
+      }
+   </style>
+
+</head>
+
+<body>
+
+   <header>
+      <div>
+         <p>
+         <h1>Ano Bissexto</h1>
+         </p>
+      </div>
+   </header>
+   <main>
+      <section>
+         <div>
+            <p><button id="btn001" onclick="fVerif()">Verificar</button></p>
+         </div>
+         <div>
+            <p>
+            <h3><span id="sTxtTitx">Informe um ano para saber se ele é bissexto</span></h3>
+            </p>
+            <p>
+            <h3><span id="sTxtLn1x"></span></h3>
+            </p>
+            <p>
+            <h3><span id="sTxtLn2x"></span></h3>
+            </p>
+         </div>
+      </section>
+   </main>
+
+   <footer>
+      <div>
+         <p>
+         <h6>Desafio 011 - PDF</h6>
+         </p>
+      </div>
+   </footer>
+
+   <script>
+      function fVerif() {
+
+         let sTxtTit = document.getElementById('sTxtTitx')
+         let sTxtLn1 = document.getElementById('sTxtLn1x')
+         let sTxtLn2 = document.getElementById('sTxtLn2x')
+         let nAnoInf = window.prompt('Informe o ano que deseja varificar:')
+         let nFimAno = nAnoInf.substring(2, 4)
+         nAnoInf = Number(nAnoInf)
+
+         if (nFimAno === 00) {
+
+            if (((nAnoInf % 400) == 0) && ((nAnoInf % 100) == 0)) {
+               sTxtTit.innerHTML = `Analisando o ano de ${nAnoInf}`
+               sTxtLn1.innerHTML = `O ano de ${nAnoInf} <span style="font-weight: bold; color: #2aa52a; background-color: #2bdc14; margin-right: 10px;">É BISSEXTO</span><img src="https://images.emojiterra.com/google/android-pie/512px/2714.png" alt="" width="20" height="18">`
+            } else {
+               sTxtTit.innerHTML = `Analisando o ano de ${nAnoInf}`
+               sTxtLn1.innerHTML = `O ano de ${nAnoInf} <span style="font-weight: bold; color: #a52a2a; background-color: #dc143c; margin-right: 10px;">NÃO É BISSEXTO</span><img src="https://contmoura.com.br/wp-content/uploads/2019/09/x-png-icon-8.png" alt="" width="25" height="25">`
+            }
+
+         } else {
+
+            if ((nAnoInf % 4) == 0) {
+               sTxtTit.innerHTML = `Analisando o ano de ${nAnoInf}`
+               sTxtLn2.innerHTML = `O ano de ${nAnoInf} <span style="font-weight: bold; color: #2aa52a; background-color: #2bdc14; margin-right: 10px;">É BISSEXTO</span><img src="https://images.emojiterra.com/google/android-pie/512px/2714.png" alt="" width="20" height="18">`
+            } else {
+               sTxtTit.innerHTML = `Analisando o ano de ${nAnoInf}`
+               sTxtLn2.innerHTML = `O ano de ${nAnoInf} <span style="font-weight: bold; color: #a52a2a; background-color: #dc143c; margin-right: 10px;">NÃO É BISSEXTO</span><img src="https://contmoura.com.br/wp-content/uploads/2019/09/x-png-icon-8.png" alt="" width="25" height="25">`
+            }
+         }
+      }
+
+   </script>
+
+</body>
+
+</html>

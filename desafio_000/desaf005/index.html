@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="../../../storage_images/encode/icon_encode.ico" type="image/x-icon">
+   <title>Conversor de Medida</title>
+
+   <style>
+      body {
+         color: #00bfff;
+         background-color: #b22222;
+         font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      h1 {
+         color: #ffd700;
+         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+         font-size: 2em
+      }
+
+      h6 {
+         color: #adff2f;
+         font-size: 0.8em;
+         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+
+      button {
+         color: #ff69b4;
+         padding: 30px;
+         background-color: #4b0082;
+      }
+   </style>
+</head>
+
+<body>
+
+   <header>
+      <div>
+         <p>
+         <h1>Conversor de Medidas</h1>
+         </p>
+      </div>
+   </header>
+
+   <main>
+      <section>
+         <div>
+            <p><button id="btn001" onclick="fMedida()">Converter</button></p>
+         </div>
+         <div id="sTxt001">
+            <p>Clique no botão acima para iniciar.</p>
+         </div>
+      </section>
+   </main>
+
+   <footer>
+      <div>
+         <p>
+         <h6>Desafio 005 - PDF</h6>
+         </p>
+      </div>
+   </footer>
+
+   <script>
+      function fMedida() {
+
+         let nDstInf = window.prompt('Digite uma distância em metros (m):')
+         nDstInf = nDstInf.replace(',', '.')
+         let nVal001 = Number(nDstInf)
+         let oTxtSte = document.getElementById('sTxt001')
+
+         oTxtSte.innerHTML = `A distância de ${Number(nDstInf).toLocaleString('pt-br')} metros, corresponde a...<br><br> ${(nVal001 / 1000).toFixed(3).replace('.', ',')} quilômetros(KM).<br>${(nVal001 / 100).toLocaleString('pt-br')} hectômetros(Hm).<br>${(nVal001 / 10).toFixed(3).replace('.', ',')} decâmetros(Dam).<br>${(nVal001 * 10).toLocaleString('pt-br')} decímetros(dm).<br>${(nVal001 * 100).toLocaleString('pt-br')} centímetros(cm).<br>${(nVal001 * 1000).toLocaleString('pt-br')} milímetros(mm)`
+      }
+
+   </script>
+</body>
+
+</html>

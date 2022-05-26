@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="../../../storage_images/encode/icon_encode.ico" type="image/x-icon">
+   <title>Preço</title>
+
+   <style>
+      body {
+         color: #00ffff;
+         font-style: normal;
+         background-color: #7c3303;
+         font-family: 'Courier New', Courier, monospace;
+      }
+
+      header {
+         text-align: center;
+      }
+
+      footer {
+         padding: 1px;
+         text-align: center;
+         background-color: darkblue;
+      }
+
+      h1 {
+         color: #7fff00;
+         font-size: 2.5em;
+         font-style: normal;
+         font-weight: bold;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      h2 {
+         color: #7fff00;
+         font-size: 2em;
+         font-style: normal;
+         font-weight: normal;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      h3 {
+         color: #7fff00;
+         font-size: 1.5em;
+         font-style: normal;
+         font-weight: normal;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      h4 {
+         color: #7fff00;
+         font-size: 1em;
+         font-style: normal;
+         font-weight: normal;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      h5 {
+         color: #7fff00;
+         font-size: 0.8em;
+         font-style: normal;
+         font-weight: normal;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      h6 {
+         color: #7fff00;
+         font-size: 0.5em;
+         font-style: normal;
+         font-weight: bold;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      button {
+         padding: 15px;
+         color: #ff7f50;
+         font-weight: 800;
+         font-size: 2em;
+         background-color: #00008b;
+         box-shadow: 5px 5px 5px #00ffff;
+         font-family: Arial, Helvetica, sans-serif;
+      }
+   </style>
+
+</head>
+
+<body>
+
+   <header>
+      <div>
+         <p>
+         <h1>Preço Mudou</h1>
+         </p>
+      </div>
+   </header>
+
+   <main>
+      <section>
+         <div>
+            <p><button id="btn001" onclick="fPreco()">Verificar</button></p>
+         </div>
+         <div>
+            <p>
+            <h2><span id="sTxtTit">Clique no botão acima para analisar a mudança de preço.</span></h2>
+            </p>
+         </div>
+         <div>
+            <p>
+            <h3><span id="sTxtLn1"></span></h3>
+            </p>
+         </div>
+         <div>
+            <p>
+            <h3><span id="sTxtLn2"></span></h3>
+            </p>
+         </div>
+         <div>
+            <p>
+            <h3><span id="sTxtLn3"></span></h3>
+            </p>
+         </div>
+         <div>
+            <p>
+            <h3><span id="sTxtLn4"></span></h3>
+            </p>
+         </div>
+      </section>
+   </main>
+
+   <footer>
+      <div>
+         <p>
+         <h6>Desafio 012 -PDF</h6>
+         </p>
+      </div>
+   </footer>
+
+   <script>
+
+      function fPreco() {
+
+         let sTxtTit = document.getElementById('sTxtTit')
+         let sTxtLn1 = document.getElementById('sTxtLn1')
+         let sTxtLn2 = document.getElementById('sTxtLn2')
+         let sTxtLn3 = document.getElementById('sTxtLn3')
+         let sTxtLn4 = document.getElementById('sTxtLn4')
+
+         let nPrcAnt = window.prompt('Qual o preço anterior do produto?')
+         let nPrcNew = window.prompt('Qual o preço atual do produto?')
+         let nValDsc = 0
+
+         sTxtTit.innerHTML = `Analisando os valores informados`
+         sTxtLn1.innerHTML = `O produto custava ${Number(nPrcAnt).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })} e agora custa ${Number(nPrcNew).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}.`
+         if (Number(nPrcAnt) > Number(nPrcNew)) {
+            nValDsc = (Number(nPrcAnt) - Number(nPrcNew))
+            sTxtLn2.innerHTML = `Hoje o produto está mais barato.`
+            sTxtLn3.innerHTML = `O preço caiu ${(Number(nPrcAnt) - Number(nPrcNew)).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}`
+            sTxtLn4.innerHTML = `Uma variação de ${((nValDsc / Number(nPrcAnt)) * 100).toFixed(2)}% de desconto.`
+         } else {
+            nValDsc = (Number(nPrcNew) - Number(nPrcAnt))
+            sTxtLn2.innerHTML = `Hoje o produto está mais caro.`
+            sTxtLn3.innerHTML = `O preço aumentou ${nValDsc.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}`
+            sTxtLn4.innerHTML = `Uma variação de ${((nValDsc / Number(nPrcAnt)) * 100).toFixed(2)}% de acréscimo.`
+         }
+
+
+      }
+
+   </script>
+
+</body>
+
+</html>

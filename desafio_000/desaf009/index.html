@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="../../../storage_images/encode/icon_encode.ico" type="image/x-icon">
+   <title>Reajuste</title>
+
+   <style>
+      body {
+         color: #d19cd1;
+         background-color: teal;
+         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      }
+
+      h1 {
+         color: #ffffff;
+         background-color: #199c9c;
+         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+
+      h6 {
+         color: #2dee8e;
+         padding: 10px;
+         background-color: #804f46;
+         font-family: monospace;
+         text-align: center;
+      }
+
+      button {
+         color: #ff6347;
+         padding: 15px;
+         background-color: #3c32cd;
+         font-family: monospace;
+         font-weight: bold;
+         font-size: 1.5em;
+         box-shadow: 5px 5px 5px #40e0d0;
+      }
+   </style>
+</head>
+
+<body>
+   <header>
+      <div>
+         <p>
+         <h1>Reajuste Salarial</h1>
+         </p>
+      </div>
+   </header>
+
+   <main>
+      <section>
+         <div>
+            <p><button id="btn001" onclick="fReaj()">Reajustar Salário</button></p>
+         </div>
+         <div>
+            <p><span id="sTxt001">Clique no botão acima para iniciar.</span></p>
+            <p><span id="sTxt002"></span></p>
+            <p><span id="sTxt003"></span></p>
+            <p><span id="sTxt004"></span></p>
+         </div>
+      </section>
+   </main>
+
+   <footer>
+      <div>
+         <p>
+         <h6>Desafio 009 - PDF</h6>
+         </p>
+      </div>
+   </footer>
+
+   <script>
+
+      function fReaj() {
+
+         let oBtnSet = document.getElementById('btn001')
+         let oTxtTit = document.getElementById('sTxt001')
+         let oTxtLn2 = document.getElementById('sTxt002')
+         let oTxtLn3 = document.getElementById('sTxt003')
+         let oTxtLn4 = document.getElementById('sTxt004')
+
+         let sNomFun = window.prompt('Qual o nome do funcionário?')
+         let nSalAtu = window.prompt(`Qual o salário atual de ${sNomFun}`)
+         let nPorcen = window.prompt(`O salário de ${sNomFun}, será reajustado em quantos porcento?`)
+         let nValAum = (nSalAtu * (nPorcen / 100))
+         let nNewSal = (Number(nSalAtu) + Number(nValAum))
+
+         oTxtTit.innerHTML = `${sNomFun} recebeu um aumento salarial!`
+         oTxtLn2.innerHTML = `O salário atual era ${Number(nSalAtu).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}`
+         oTxtLn3.innerHTML = `Com um automento de ${nPorcen}%, osalário vai aumenta ${Number(nValAum).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })} no próximo mês.`
+         oTxtLn4.innerHTML = `E a partir daí, ${sNomFun} vai passar a ganhar ${nNewSal.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}`
+      }
+
+   </script>
+
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="../../../storage_images/encode/icon_encode.ico" type="image/x-icon">
+   <title>Conversor Monetário</title>
+
+   <style>
+      body {
+         color: hsl(30, 91%, 68%);
+         background-color: #bc8f8f;
+         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+
+      h1 {
+         color: #fa8072;
+         font-family: monospace;
+      }
+
+      h6 {
+         color: #fff5ee;
+         font-family: fantasy;
+      }
+
+      button {
+         padding: 30px;
+         color: #c0c0c0;
+         background-color: #6a5acd;
+         box-shadow: 5px 5px 5px #64f86b;
+      }
+   </style>
+
+</head>
+
+<body>
+
+   <header>
+      <div>
+         <p>
+         <h1>Conversor R$ -> US$</h1>
+         </p>
+      </div>
+   </header>
+
+   <main>
+      <section>
+         <div>
+            <p><button id="btn001" onclick="fConv()">Converter</button></p>
+         </div>
+         <div>
+            <p> <span id="sTxt001">Clique no botão acima para iniciar.</span> </p>
+         </div>
+      </section>
+   </main>
+
+   <footer>
+      <div>
+         <p>
+         <h6>Desafio 007 - PDF</h6>
+         </p>
+      </div>
+   </footer>
+
+   <script>
+      function fConv() {
+
+         let oTxtRes = document.getElementById('sTxt001')
+         let oBtnRes = document.getElementById('btn001')
+         let nValCot = window.prompt('Antes de mais nada. Quanto está a cotação do dólar agora?')
+         nValCot = nValCot.replace(',', '.')
+         let nValRea = window.prompt('Qual valor em reais deseja converter?')
+         nValRea = nValRea.replace(',', '.')
+
+         let nValDol = (Number(nValRea) / Number(nValCot)) //.toFixed(2).replace('.', ',')
+
+         oTxtRes.style.color = '#0000ff'
+         oTxtRes.style.fontSize = '2em'
+         oTxtRes.style.fontFamily = 'Arial'
+         oTxtRes.innerHTML = `O total em dólares que possui é ${nValDol.toLocaleString('pt-br', { style: 'currency', currency: 'USD' })}`
+
+         oBtnRes.style.backgroundColor = '#0000ff'
+         oBtnRes.style.color = '#ffff00'
+         oBtnRes.innerHTML = 'Clicou!'
+         oBtnRes.style.boxShadow = '5px 5px 5px #000000'
+
+      }
+
+   </script>
+
+</body>
+
+</html>

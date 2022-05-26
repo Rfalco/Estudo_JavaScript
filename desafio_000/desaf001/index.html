@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="../../../storage_images/encode/icon_encode.ico" type="image/x-icon">
+   <title>Mensagens</title>
+
+   <style>
+      body {
+         color: #66cdaa;
+         background-color: #800000;
+         font-family: Arial, Helvetica, sans-serif;
+      }
+
+      h1 {
+         color: #c71585;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      h6 {
+         color: #ffe4b5;
+         font-family: fantasy;
+      }
+
+      button {
+         color: #f15e24;
+         margin: 30px;
+         padding: 30px;
+         font-size: 1.5em;
+         font-style: italic;
+         font-weight: 900;
+         background-color: #0e467e;
+         font-family: 'Courier New', Courier, monospace;
+      }
+   </style>
+
+</head>
+
+<body>
+
+   <header>
+      <div>
+         <p>
+         <h1>Desafio das Mensagens</h1>
+         </p>
+      </div>
+   </header>
+
+   <main>
+      <section>
+         <div>
+            <p>
+               <button id="btn001" onclick="fClicou(1)">Botão 1</button>
+               <button id="btn002" onclick="fClicou(2)">Botão 2</button>
+               <button id="btn003" onclick="fClicou(3)">Botão 3</button>
+            </p>
+         </div>
+      </section>
+   </main>
+
+   <footer>
+      <div>
+         <p>
+         <h6>Desafio 001 - PDF</h6>
+         </p>
+      </div>
+   </footer>
+
+   <script>
+      function fClicou(nOpc) {
+
+         let sIddBtn = 'btn00' + nOpc
+         let oBtnSet = document.getElementById(sIddBtn)
+         if (nOpc == 1) {
+            window.alert('O BOTÃO 1 foi pressionado!')
+            var sInfUsu = window.prompt('Qual seu nome?')
+         } else if (nOpc == 2) {
+            window.alert('O BOTÃO 2 foi pressionado!')
+            var sInfUsu = window.prompt('Qual sua idade?')
+         } else {
+            window.alert('O BOTÃO 3 foi pressionado!')
+            var sInfUsu = window.prompt('Onde Mora?')
+         }
+         oBtnSet.style.boxShadow = '5px 5px 5px #00ffff'
+         oBtnSet.style.color = '#ff00ff'
+         oBtnSet.innerText = sInfUsu 
+      }
+
+   </script>
+
+</body>
+
+</html>

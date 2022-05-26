@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="../../../storage_images/encode/icon_encode.ico" type="image/x-icon">
+   <title>Situação do Aluno</title>
+   <style>
+      body {
+         color: #00ffff;
+         font-style: normal;
+         background-color: #084706;
+         font-family: 'Courier New', Courier, monospace;
+      }
+
+      header {
+         text-align: center;
+      }
+
+      footer {
+         padding: 1px;
+         text-align: center;
+         background-color: #058b00;
+      }
+
+      h1 {
+         color: #ff0022;
+         font-size: 2.5em;
+         font-style: normal;
+         font-weight: bold;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      h2 {
+         color: #ff0022;
+         font-size: 2em;
+         font-style: normal;
+         font-weight: normal;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      h3 {
+         color: #ff0022;
+         font-size: 1.5em;
+         font-style: normal;
+         font-weight: normal;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      h4 {
+         color: #ff0022;
+         font-size: 1em;
+         font-style: normal;
+         font-weight: normal;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      h5 {
+         color: #ff0022;
+         font-size: 0.8em;
+         font-style: normal;
+         font-weight: normal;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      h6 {
+         color: #ff0022;
+         font-size: 0.5em;
+         font-style: normal;
+         font-weight: bold;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      button {
+         padding: 15px;
+         color: #73ff50;
+         font-weight: 800;
+         font-size: 2em;
+         background-color: #00008b;
+         box-shadow: 5px 5px 5px #00ffff;
+         font-family: Arial, Helvetica, sans-serif;
+      }
+   </style>
+</head>
+
+<body>
+
+   <header>
+      <div>
+         <p>
+         <h1>Situação do Aluno</h1>
+         </p>
+      </div>
+   </header>
+
+   <main>
+      <section>
+         <div>
+            <p><button id="btn001" onclick="fNotas()">Entrar com as Notas</button></p>
+         </div>
+         <div>
+            <h2><span id="sTxtTit"></span></h2>
+         </div>
+         <div>
+            <h3><span id="sTxtLn1"></span></h3>
+         </div>
+         <div>
+            <h3><span id="sTxtLn2"></span></h3>
+         </div>
+      </section>
+   </main>
+
+   <footer>
+      <div>
+         <p>
+         <h6>Desafio 013 - PDF</h6>
+         </p>
+      </div>
+   </footer>
+
+   <script>
+
+      function fNotas() {
+
+         let sTxtTit = document.getElementById('sTxtTit')
+         let sTxtLn1 = document.getElementById('sTxtLn1')
+         let sTxtLn2 = document.getElementById('sTxtLn2')
+
+         let sNomAlu = window.prompt('Qual o nome do aluno(a)?')
+         let nNot001 = window.prompt(`Primeira nota de ${sNomAlu}:`)
+         let nNot002 = window.prompt(`Segunda nota de ${sNomAlu}:`)
+         nNot001 = nNot001.replace(',', '.')
+         nNot002 = nNot002.replace(',', '.')
+         let nMedFim = ((Number(nNot001) + Number(nNot002)) / 2).toFixed(2)
+
+
+
+         if (Number(nMedFim) < 3) {
+            sTxtTit.innerHTML = `Analisando a situação de ${sNomAlu}`
+            sTxtLn1.innerHTML = `Com as notas ${Number(nNot001).toFixed(1)} e ${Number(nNot002).toFixed(1)}, a média final foi ${Number(nMedFim).toFixed(1)}`
+            sTxtLn2.innerHTML = `Com média abaixo 3.0, o aluno está <span style="background-color: #dc143c; color: #69071a;">REPROVADO</span>`
+         } else if (Number(nMedFim) > 6) {
+            sTxtTit.innerHTML = `Analisando a situação de ${sNomAlu}`
+            sTxtLn1.innerHTML = `Com as notas ${Number(nNot001).toFixed(1)} e ${Number(nNot002).toFixed(1)}, a média final foi ${Number(nMedFim).toFixed(1)}`
+            sTxtLn2.innerHTML = `Com média acima de 6.0, o aluno está <span style="background-color: #1bdc14; color: #076907;">APROVADO</span>`
+
+         } else {
+            sTxtTit.innerHTML = `Analisando a situação de ${sNomAlu}`
+            sTxtLn1.innerHTML = `Com as notas ${Number(nNot001).toFixed(1)} e ${Number(nNot002).toFixed(1)}, a média final foi ${Number(nMedFim).toFixed(1)}`
+            sTxtLn2.innerHTML = `Com média entre 3.0 e 6.0, o aluno está <span style="background-color: #dcad14; color: #694f07;">RECUPERAÇÃO</span>`
+
+         }
+
+      }
+
+   </script>
+
+</body>
+
+</html>

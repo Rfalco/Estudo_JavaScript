@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlassMorphism 2</title>
+    <link rel="stylesheet" href="./assets/css/style4.css">
+    <link rel="shortcut icon" href="./images/encode/icon_encode.ico" type="image/x-icon">
+</head>
+
+<body>
+
+
+    <section>
+        <header>
+            <a href="#" class="logo">Encode</a>
+            <div class="toggle" onclick="menuToggle();"></div>
+        </header>
+        <div class="glass"></div>
+        <div class="content">
+            <h2>Tecnologia...<br><span>Está mudando nossa maneira de pensar!</span></h2>
+        </div>
+        <video src="./videos/Hyper Tech 1-1.m4v" autoplay muted loop></video>
+        <ul class="sci">
+            <li style="--i:1"> <a href="#">Facebook</a></li>
+            <li style="--i:2"> <a href="#">Twitter</a></li>
+            <li style="--i:3"> <a href="#">Instagran</a></li>
+        </ul>
+        <ul class="navigation">
+            <li style="--i:1"><a href="#">Home</a></li>
+            <li style="--i:2"><a href="#">About</a></li>
+            <li style="--i:3"><a href="#">Tour</a></li>
+            <li style="--i:4"><a href="#">Contact</a></li>
+        </ul>
+    </section>
+
+    <script>
+        function menuToggle() {
+            const toggleMenu = document.querySelector('.toggle');
+            const section = document.querySelector('section');
+            toggleMenu.classList.toggle('active');
+            section.classList.toggle('active');
+        }
+    </script>
+
+</body>
+
+</html>

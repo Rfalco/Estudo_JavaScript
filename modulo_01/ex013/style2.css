@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;900&display=swap');
+
+body {
+   color: #ffffff;
+   font-size: 1em;
+   font-weight: normal;
+   background-color: #39a0ad;
+   font-family: 'Poppins', sans-serif;
+}
+
+header {
+   text-align: center;
+}
+
+footer {
+   margin-top: 50px;
+   text-align: center;
+   background-color: #39a0ad;
+   /*
+padding: 1px;
+box-shadow: 10px 10px 10px 5px #777228;
+*/
+}
+
+main {
+   width: 500px;
+   margin: auto;
+   padding: 15px;
+   border-radius: 15px;
+   box-shadow: 10px 10px 10px #f8f674;
+   background-color: #2d4fe7;
+}
+
+h1 {
+   color: #a11313;
+   font-size: 2.5em;
+   font-style: normal;
+   font-weight: bold;
+   font-family: 'Times New Roman', Times, serif;
+}
+
+h2 {
+   color: #a11313;
+   font-size: 2em;
+   font-style: normal;
+   font-weight: normal;
+   font-family: 'Times New Roman', Times, serif;
+}
+
+h3 {
+   color: #a11313;
+   font-size: 1.5em;
+   font-style: normal;
+   font-weight: normal;
+   font-family: 'Times New Roman', Times, serif;
+}
+
+h4 {
+   color: #a11313;
+   font-size: 1em;
+   font-style: normal;
+   font-weight: normal;
+   font-family: 'Times New Roman', Times, serif;
+}
+
+h5 {
+   color: #a11313;
+   font-size: 0.8em;
+   font-style: normal;
+   font-weight: normal;
+   font-family: 'Times New Roman', Times, serif;
+}
+
+h6 {
+   color: #a11313;
+   font-size: 0.8em;
+   font-style: normal;
+   font-weight: bold;
+   font-family: 'Times New Roman', Times, serif;
+}
+
+/*style="height: 200px; overflow: scroll; width: 150px;"*/
+
+.BxNume {
+   padding: 15px;
+}
+
+.BxList {
+   margin: 30px 5px;
+   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+   transition: 0.5s ease-in-out;
+}
+
+.LstTab{
+   font-family: monospace;
+}
+
+#nNumtab {
+   font-family: monospace;
+   font-size: 15px;
+   font-weight: bold;
+}
+
+#btTabu {
+   font-weight: bold;
+   border-radius: 5px;
+   font-family: 'Poppins', sans-serif;
+   width: 110px;
+   height: 25px;
+   background-color: rgb(236, 238, 105);
+}

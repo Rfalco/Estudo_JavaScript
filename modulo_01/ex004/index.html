@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="../../storage_images/encode/icon_encode.ico" type="image/x-icon">
+   <title>Document</title>
+   <style>
+      body {
+         background-color: #a5a4a4;
+         color: #228b22;
+      }
+
+      h1 {
+         color: #ffd700;
+      }
+   </style>
+</head>
+
+<body>
+
+   <header>
+      <div>
+         <p>
+         <h1>Função JavaScript</h1>
+         </p>
+      </div>
+   </header>
+
+   <main>
+      <section>
+         <div>
+            <p>Corpo</p>
+         </div>
+      </section>
+   </main>
+
+   <footer>
+      <div>
+         <p>
+         <h6>Exercício 004</h6>
+         </p>
+      </div>
+   </footer>
+
+   <script>
+      var sNome = window.prompt('Qual seu nome?')
+      document.write(`Olá, ${sNome}, seu nome tem ${sNome.length} letras.<br>`)
+      document.write(`Seu nome em maiúsculo é ${sNome.toUpperCase()}.<br>`)
+      document.write(`Seu nome em minúsculo é ${sNome.toLowerCase()}.<br><br>`)
+
+      var nVal1 = Number(window.prompt('Qual o valor da conta: '))
+
+      document.write(`O valor informado foi ${nVal1.toFixed(2).replace('.', ',')} <br><br>`)
+
+      var nConta = nVal1.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })
+      document.write(`O valor da sua conta em REAIS foi: ${nConta} <br>`)
+
+      var nConta = nVal1.toLocaleString('pt-br', { style: 'currency', currency: 'USD' })
+      document.write(`O valor da sua conta em DÓLAR foi: ${nConta} <br>`)
+
+      var nConta = nVal1.toLocaleString('pt-br', { style: 'currency', currency: 'EUR' })
+      document.write(`O valor da sua conta em EURO foi: ${nConta} <br>`)
+
+   </script>
+</body>
+
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-4">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="../../storage_images/encode/icon_encode.ico" type="image/x-icon">
+   <title>Somando Números</title>
+</head>
+
+<style>
+   body {
+      color: #ffffff;
+      font-size: 1em;
+      font-weight: normal;
+      background-color: #4a045f;
+      font-family: Arial, Helvetica, sans-serif;
+   }
+
+   header {
+      text-align: center;
+   }
+
+   footer {
+      padding: 1px;
+      text-align: center;
+      background-color: #0e008b;
+   }
+
+   h1 {
+      color: #c2af04;
+      font-size: 2.5em;
+      font-style: normal;
+      font-weight: bold;
+      font-family: 'Times New Roman', Times, serif;
+   }
+
+   h2 {
+      color: #c2af04;
+      font-size: 2em;
+      font-style: normal;
+      font-weight: normal;
+      font-family: 'Times New Roman', Times, serif;
+   }
+
+   h3 {
+      color: #c2af04;
+      font-size: 1.5em;
+      font-style: normal;
+      font-weight: normal;
+      font-family: 'Times New Roman', Times, serif;
+   }
+
+   h4 {
+      color: #c2af04;
+      font-size: 1em;
+      font-style: normal;
+      font-weight: normal;
+      font-family: 'Times New Roman', Times, serif;
+   }
+
+   h5 {
+      color: #c2af04;
+      font-size: 0.8em;
+      font-style: normal;
+      font-weight: normal;
+      font-family: 'Times New Roman', Times, serif;
+   }
+
+   h6 {
+      color: #c2af04;
+      font-size: 0.8em;
+      font-style: normal;
+      font-weight: bold;
+      font-family: 'Times New Roman', Times, serif;
+   }
+
+   button {
+      padding: 15px;
+      color: #73ff50;
+      font-weight: 800;
+      font-size: 2em;
+      background-color: #00008b;
+      box-shadow: 5px 5px 5px #00ffff;
+      font-family: Arial, Helvetica, sans-serif;
+   }
+
+   div#btnArea1,
+   div#btnArea2 {
+      color: #00008b;
+      margin: 15px;
+      width: 150px;
+      height: 150px;
+      text-align: center;
+      font: normal 20px Arial;
+      background-color: #00ffff;
+      line-height: 150px;
+   }
+
+   div#btnArea3,
+   div#btnArea4 {
+      margin: 15px;
+      width: 150px;
+      height: 150px;
+      text-align: center;
+      color: #d5e72d;
+      font: normal 20px Arial;
+      background-color: #ff3c00;
+      line-height: 150px;
+   }
+
+   .sSinal {
+      font-size: 2em;
+   }
+</style>
+
+<body>
+
+   <header>
+      <div>
+         <p>
+         <h1>Somando Números</h1>
+         </p>
+      </div>
+   </header>
+
+   <main>
+      <section>
+         <div>
+            <p>
+               <input type="number" name="nNum001" id="nNum001">
+               <span class="sSinal">+</span>
+               <input type="number" name="nNum002" id="nNum002">
+               <input type="button" value="Somar" onclick="fSoma()">
+            </p>
+         </div>
+         <div id="sResSom">
+            <p>Resultado:________</p>
+         </div>
+      </section>
+   </main>
+
+   <footer>
+      <div>
+         <p>
+         <h6>Exercício Evento <strong>DOM</strong></h6>
+         </p>
+      </div>
+   </footer>
+
+   <script>
+      function fSoma() {
+         let sVal001 = window.document.getElementById('nNum001')
+         let sVal002 = window.document.querySelector('input#nNum002')
+         let sResSom = window.document.getElementById('sResSom')
+         let nVal001 = Number(sVal001.value)
+         let nVal002 = Number(sVal002.value)
+         let nResSom = nVal001 + nVal002
+
+         sResSom.innerHTML = `<p>Resultado: __${nResSom}__</p>`
+
+      }
+   </script>
+
+</body>
+
+</html>

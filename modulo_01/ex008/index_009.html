@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="../../storage_images/encode/icon_encode.ico" type="image/x-icon">
+   <title>Nacionalidade</title>
+
+   <style>
+      body {
+         color: #ffffff;
+         font-size: 1em;
+         font-weight: normal;
+         background-color: #5f0404;
+         font-family: Arial, Helvetica, sans-serif;
+      }
+
+      header {
+         text-align: center;
+      }
+
+      footer {
+         padding: 1px;
+         text-align: center;
+         background-color: #8b0000;
+      }
+
+      h1 {
+         color: #c2af04;
+         font-size: 2.5em;
+         font-style: normal;
+         font-weight: bold;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      h2 {
+         color: #c2af04;
+         font-size: 2em;
+         font-style: normal;
+         font-weight: normal;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      h3 {
+         color: #c2af04;
+         font-size: 1.5em;
+         font-style: normal;
+         font-weight: normal;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      h4 {
+         color: #c2af04;
+         font-size: 1em;
+         font-style: normal;
+         font-weight: normal;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      h5 {
+         color: #c2af04;
+         font-size: 0.8em;
+         font-style: normal;
+         font-weight: normal;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      h6 {
+         color: #c2af04;
+         font-size: 0.8em;
+         font-style: normal;
+         font-weight: bold;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      button {
+         padding: 15px;
+         color: #73ff50;
+         font-weight: 800;
+         font-size: 2em;
+         background-color: #00008b;
+         box-shadow: 5px 5px 5px #00ffff;
+         font-family: Arial, Helvetica, sans-serif;
+      }
+
+      div#btnArea1,
+      div#btnArea2 {
+         color: #00008b;
+         margin: 15px;
+         width: 150px;
+         height: 150px;
+         text-align: center;
+         font: normal 20px Arial;
+         background-color: #00ffff;
+         line-height: 150px;
+      }
+
+      div#btnArea3,
+      div#btnArea4 {
+         margin: 15px;
+         width: 150px;
+         height: 150px;
+         text-align: center;
+         color: #d5e72d;
+         font: normal 20px Arial;
+         background-color: #ff3c00;
+         line-height: 150px;
+      }
+
+      .sSinal {
+         font-size: 2em;
+      }
+   </style>
+
+</head>
+
+<body>
+
+   <header>
+      <div>
+         <p>
+         <h1>Nacionalidade</h1>
+         </p>
+      </div>
+   </header>
+
+   <main>
+      <section>
+         <div>
+            <p>
+               Você é de qual país:
+               <input type="text" name="sTxt001" id="txt001">
+               <input type="button" value="Nacionalidade" onclick="fNacional()">
+            </p>
+         </div>
+         <div id="sResult"></div>
+      </section>
+   </main>
+
+   <footer>
+      <div>
+         <p>
+         <h6>Exercício de Condições</h6>
+         </p>
+      </div>
+   </footer>
+
+   <script>
+
+      function fNacional() {
+
+         let sTxtPai = document.querySelector('input#txt001')
+         let sResult = document.querySelector('div#sResult')
+         let sPaisIn = (sTxtPai.value).toUpperCase()
+
+         sResult.innerHTML = `<p>O país que você digitou foi <strong>${sPaisIn}</strong>.</p>`
+         if (sPaisIn == 'BRASIL') {
+            sResult.innerHTML += `<p>O que significa que você é <strong>BRASILEIRO</strong>.</p>`
+
+         } else {
+            sResult.innerHTML += `<p>O que significa que você é <strong>ESTRANGEIRO</strong>.</p>`
+
+         }
+
+      }
+   </script>
+
+</body>
+
+</html>

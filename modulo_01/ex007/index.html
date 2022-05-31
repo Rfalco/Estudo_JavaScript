@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="../../storage_images/encode/icon_encode.ico" type="image/x-icon">
+   <title>Eventos DOM</title>
+
+
+   <style>
+      body {
+         color: #ffffff;
+         font-size: 1em;
+         font-weight: normal;
+         background-color: #04045f;
+         font-family: Arial, Helvetica, sans-serif;
+      }
+
+      header {
+         text-align: center;
+      }
+
+      footer {
+         padding: 1px;
+         text-align: center;
+         background-color: #0e008b;
+      }
+
+      h1 {
+         color: #1bc204;
+         font-size: 2.5em;
+         font-style: normal;
+         font-weight: bold;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      h2 {
+         color: #1bc204;
+         font-size: 2em;
+         font-style: normal;
+         font-weight: normal;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      h3 {
+         color: #a52a2a;
+         font-size: 1.5em;
+         font-style: normal;
+         font-weight: normal;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      h4 {
+         color: #1bc204;
+         font-size: 1em;
+         font-style: normal;
+         font-weight: normal;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      h5 {
+         color: #1bc204;
+         font-size: 0.8em;
+         font-style: normal;
+         font-weight: normal;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      h6 {
+         color: #1bc204;
+         font-size: 0.5em;
+         font-style: normal;
+         font-weight: bold;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      button {
+         padding: 15px;
+         color: #73ff50;
+         font-weight: 800;
+         font-size: 2em;
+         background-color: #00008b;
+         box-shadow: 5px 5px 5px #00ffff;
+         font-family: Arial, Helvetica, sans-serif;
+      }
+
+      div#btnArea1,
+      div#btnArea2 {
+         color: #00008b;
+         margin: 15px;
+         width: 150px;
+         height: 150px;
+         text-align: center;
+         font: normal 20px Arial;
+         background-color: #00ffff;
+         line-height: 150px;
+      }
+
+      div#btnArea3,
+      div#btnArea4 {
+         margin: 15px;
+         width: 150px;
+         height: 150px;
+         text-align: center;
+         color: #d5e72d;
+         font: normal 20px Arial;
+         background-color: #ff3c00;
+         line-height: 150px;
+      }
+   </style>
+
+</head>
+
+<body>
+
+   <header>
+      <div>
+         <p>Interagindo com DOM</p>
+      </div>
+   </header>
+
+   <main> 
+      <section>
+         <div id="btnArea1" onclick="fClicar(1)" onmouseenter="fEntrar(1)" onmouseout="fSair(1)">
+            Interaja 1
+         </div>
+         <div id="btnArea2" onclick="fClicar(2)" onmouseenter="fEntrar(2)" onmouseout="fSair(2)">
+            Interaja 2
+         </div>
+      </section>
+      <section>
+         <div id="btnArea3">
+            Interaja 3
+         </div>
+         <div id="btnArea4">
+            Interaja 4
+         </div>
+      </section>
+   </main>
+
+   <footer>
+      <div>
+         <p>
+         <h6>Eventos DOM - Exercícios</h6>
+         </p>
+      </div>
+   </footer>
+
+   <script>
+      var oBtnEv3 = document.getElementById('btnArea3')
+      var oBtnEv4 = document.getElementById('btnArea4')
+
+      oBtnEv3.addEventListener('click', function () { fClic(3); })
+      oBtnEv3.addEventListener('mouseenter', function () { fEnt(3); })
+      oBtnEv3.addEventListener('mouseout', function () { fSai(3); })
+
+      oBtnEv4.addEventListener('click', function () { fClic(4); })
+      oBtnEv4.addEventListener('mouseenter', function () { fEnt(4); })
+      oBtnEv4.addEventListener('mouseout', function () { fSai(4); })
+
+      function fClic(sParInf) {
+         let sNomElm = 'btnArea' + sParInf
+         let oBtnCli = document.getElementById(sNomElm)
+
+         oBtnCli.innerHTML = `Clicou ${sParInf}`
+         oBtnCli.style.color = "#000000"
+         oBtnCli.style.backgroundColor = '#1bc204'
+         oBtnCli.style.boxShadow = '5px 5px 5px #ffff00'
+      }
+
+      function fEnt(sParInf) {
+         let sNomElm = 'btnArea' + sParInf
+         let oBtnCli = document.getElementById(sNomElm)
+
+         oBtnCli.style.color = "#0000ff"
+         oBtnCli.innerHTML = `Entrou ${sParInf}`
+         oBtnCli.style.backgroundColor = '#ffff00'
+         oBtnCli.style.boxShadow = '5px 5px 5px #ffffff'
+      }
+
+      function fSai(sParInf) {
+         let sNomElm = 'btnArea' + sParInf
+         let oBtnCli = document.getElementById(sNomElm)
+
+            oBtnCli.innerHTML = `Interaja ${sParInf}`
+            oBtnCli.style.color = "#00008d"
+            oBtnCli.style.fontSize = '20px'
+            oBtnCli.style.fontFamily = 'Verdana'
+            oBtnCli.style.backgroundColor = '#00ffff'
+            oBtnCli.style.boxShadow = '0px 0px 0px #ffffff'
+      }
+
+      /********************************************************************/
+
+      function fClicar(sParInf) {
+         let sNomElm = 'btnArea' + sParInf
+         let oBtnCli = document.getElementById(sNomElm)
+
+         oBtnCli.innerHTML = `Clicou ${sParInf}`
+         oBtnCli.style.color = "#0000ff"
+         oBtnCli.style.backgroundColor = '#ffff00'
+         oBtnCli.style.boxShadow = '5px 5px 5px #ffffff'
+      }
+
+      function fEntrar(sParInf) {
+         let sNomElm = 'btnArea' + sParInf
+         let oBtnCli = document.getElementById(sNomElm)
+
+         oBtnCli.innerHTML = `Entrou ${sParInf}`
+         oBtnCli.style.color = "#000000"
+         oBtnCli.style.backgroundColor = '#1bc204'
+         oBtnCli.style.boxShadow = '5px 5px 5px #ffff00'
+      }
+
+
+      function fSair(sParInf) {
+         let sNomElm = 'btnArea' + sParInf
+         let oBtnCli = document.getElementById(sNomElm)
+
+         oBtnCli.style.color = '#d5e72d'
+         oBtnCli.style.fontSize = '20px'
+         oBtnCli.style.fontFamily = 'Verdana'
+         oBtnCli.style.backgroundColor = '#ff3c00'
+         oBtnCli.innerHTML = `Interaja ${sParInf}`
+         oBtnCli.style.boxShadow = '0px 0px 0px #ffffff'
+      }
+
+   </script>
+
+</body>
+
+</html>

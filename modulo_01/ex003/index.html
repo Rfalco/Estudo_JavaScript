@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset=" UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="../../storage_images/encode/icon_encode.ico" type="image/x-icon">
+   <title>Valor Numérico</title>
+
+   <style>
+      body {
+         background-color: #a9a9a9;
+         color: #0b7507;
+      }
+
+      h1 {
+         color: #8b0000;
+      }
+   </style>
+
+</head>
+
+<body>
+
+   <header>
+      <div>
+         <p>
+         <h1>Conversão de tipo de variável</h1>
+         </p>
+      </div>
+   </header>
+
+   <main>
+      <section>
+         <div>
+            <p>Corpo</p>
+         </div>
+      </section>
+   </main>
+
+   <footer>
+      <div>
+         <p>
+         <h6>Exercício 003</h6>
+         </p>
+      </div>
+   </footer>
+
+   <script>
+      var nNum1 = window.prompt('Digite o primeiro número: ')
+      var nNum2 = window.prompt('Digite o segundo número: ')
+
+      var nRes = nNum1 + nNum2
+      window.alert('A soma dos valores é = ' + nRes + ', neste caso os valores foram concatenados')
+
+      nRes = Number.parseInt(nNum1) + Number.parseInt(nNum2)
+      window.alert('A soma dos valores é = ' + nRes + ', neste caso os valores foram convertidos em NÚMEROS INTEIROS')
+
+      nRes = Number.parseFloat(nNum1) + Number.parseFloat(nNum2)
+      window.alert('A soma dos valores é = ' + nRes + ', neste caso os valores foram convertidos em NÚMEROS REAIS')
+
+      nRes = Number(nNum1) + Number(nNum2)
+      window.alert('A soma dos valores é = ' + nRes + ', neste caso os valores foram convertidos em NÚMEROS REAIS com apenas a função Number()')
+
+      var sNome = window.prompt('Qual seu nome?')
+      var nIdade = window.prompt('Qual a sua idade?')
+      var nNota1 = window.prompt('Qual a sua nota na prova mensal?')
+      var nNota2 = window.prompt('Qual a sua nota bimestral?')
+      var nMedia = (Number(nNota1) + Number(nNota2)) / 2
+
+      window.alert(`O aluno ${sNome}, de ${nIdade} anos, teve a média final de ${nMedia}`)   /// utilizando a técnica de interpolação (template string)
+
+
+   </script>
+
+</body>
+
+</html>

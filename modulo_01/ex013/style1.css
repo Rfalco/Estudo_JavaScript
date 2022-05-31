@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;900&display=swap');
+
+body {
+   color: #ffffff;
+   font-size: 1em;
+   font-weight: normal;
+   background-color: #5f0404;
+   font-family: 'Poppins', sans-serif;
+}
+
+header {
+   text-align: center;
+}
+
+footer {
+   margin-top: 50px;
+   text-align: center;
+   background-color: #5f0404;
+   /*
+padding: 1px;
+box-shadow: 10px 10px 10px 5px #777228;
+*/
+}
+
+main {
+   width: 500px;
+   margin: auto;
+   padding: 15px;
+   border-radius: 15px;
+   box-shadow: 10px 10px 10px #f8f674;
+   background-color: #e7712d;
+}
+
+h1 {
+   color: #64624d;
+   font-size: 2.5em;
+   font-style: normal;
+   font-weight: bold;
+   font-family: 'Times New Roman', Times, serif;
+}
+
+h2 {
+   color: #64624d;
+   font-size: 2em;
+   font-style: normal;
+   font-weight: normal;
+   font-family: 'Times New Roman', Times, serif;
+}
+
+h3 {
+   color: #64624d;
+   font-size: 1.5em;
+   font-style: normal;
+   font-weight: normal;
+   font-family: 'Times New Roman', Times, serif;
+}
+
+h4 {
+   color: #64624d;
+   font-size: 1em;
+   font-style: normal;
+   font-weight: normal;
+   font-family: 'Times New Roman', Times, serif;
+}
+
+h5 {
+   color: #64624d;
+   font-size: 0.8em;
+   font-style: normal;
+   font-weight: normal;
+   font-family: 'Times New Roman', Times, serif;
+}
+
+h6 {
+   color: #64624d;
+   font-size: 0.8em;
+   font-style: normal;
+   font-weight: bold;
+   font-family: 'Times New Roman', Times, serif;
+}
+
+.xParam {
+   display: flex;
+   position: relative;
+   padding: 15px;
+   border-radius: 10px;
+   box-shadow: 0 5px 20px rgba(100, 98, 74, 0.5);
+   transition: 0.5s ease-in-out;
+}
+
+.xValPar input {
+   font-weight: bold;
+   font-family: monospace;
+   width: 55px;
+   height: 12px;
+}
+
+.xValPar .btCont {
+   width: 70px;
+   height: 30px;
+   font-size: 15px;
+   font-weight: bold;
+   border-radius: 5px;
+   font-family: 'Poppins', sans-serif;
+   background-color: rgb(255, 230, 0);
+}

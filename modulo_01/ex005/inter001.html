@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="../../storage_images/encode/icon_encode.ico" type="image/x-icon">
+   <title>Interação JS</title>
+
+   <style>
+      body {
+         font-size: 1em;
+         color: #0a127e;
+         background-color: #e0ffff;
+         font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      h1 {
+
+         color: #149292;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      h2 {
+
+         color: #595392;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      h6 {
+
+         color: #c20b0b;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      button {
+         font-size: 2em;
+         padding: 30px;
+         box-shadow: 5px 5px 15px #f7f706;
+         /*background-image: linear-gradient(45deg, #ff0000, #f19595);*/
+      }
+
+      /* ---------- definição de classes ---------- */
+   </style>
+</head>
+
+<body>
+
+   <header>
+      <div>
+         <p>
+         <h1>Interagindo com um botão</h1>
+         </p>
+      </div>
+   </header>
+
+   <main>
+      <section>
+         <div>
+            <p><button id="btn001" onclick="fClicou()">Clique Aqui!</button></p>
+         </div>
+      </section>
+   </main>
+
+   <footer>
+      <div>
+         <p>
+         <h6>Exercício 004 - PDF</h6>
+         </p>
+      </div>
+   </footer>
+
+   <script>
+      function fClicou() {
+         document.getElementById("btn001").style.boxShadow = "10px 20px 30px #000050";
+         document.getElementById("btn001").style.color = "#ffff99";
+         document.getElementById("btn001").style.backgroundColor = "#99ffff";
+         window.alert('Você clicou no botão!')
+      }
+   </script>
+
+</body>
+
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="../../storage_images/encode/icon_encode.ico" type="image/x-icon">
+   <title>Iniciando com DOM</title>
+
+   <style>
+      body {
+         color: #ffffff;
+         font-size: 1em;
+         font-weight: normal;
+         background-color: #04045f;
+         font-family: Arial, Helvetica, sans-serif;
+      }
+
+      header {
+         text-align: center;
+      }
+
+      footer {
+         padding: 1px;
+         text-align: center;
+         background-color: #0e008b;
+      }
+
+      h1 {
+         color: #1bc204;
+         font-size: 2.5em;
+         font-style: normal;
+         font-weight: bold;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      h2 {
+         color: #1bc204;
+         font-size: 2em;
+         font-style: normal;
+         font-weight: normal;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      h3 {
+         color: #1bc204;
+         font-size: 1.5em;
+         font-style: normal;
+         font-weight: normal;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      h4 {
+         color: #1bc204;
+         font-size: 1em;
+         font-style: normal;
+         font-weight: normal;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      h5 {
+         color: #1bc204;
+         font-size: 0.8em;
+         font-style: normal;
+         font-weight: normal;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      h6 {
+         color: #1bc204;
+         font-size: 0.5em;
+         font-style: normal;
+         font-weight: bold;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      button {
+         padding: 15px;
+         color: #73ff50;
+         font-weight: 800;
+         font-size: 2em;
+         background-color: #00008b;
+         box-shadow: 5px 5px 5px #00ffff;
+         font-family: Arial, Helvetica, sans-serif;
+      }
+
+      #SecImg {
+         text-align: center;
+      }
+   </style>
+</head>
+
+<body>
+
+   <header>
+      <div>
+         <p>0000000000000
+         <h1>Iniciando estudos <strong>DOM</strong></h1>
+         </p>
+      </div>
+   </header>
+
+   <main>
+      <section>
+         <div>
+            <p>11111111111111
+            <h2>Aqui vai o resultado</h2>
+            </p>
+         </div>
+         <div>
+            <p>2222222222222222
+            <h2>Aprendendo a usar o <strong>DOM</strong> em JavaScript</h2>
+            </p>
+         </div>
+         <div>
+            <p>3333333333
+            <h3>Clique em mim</h3>
+            </p>
+         </div>
+      </section>
+      <hr>
+      <section id="SecImg">
+         <div>
+            <p>4444444444444
+            <h2><strong>DOM - Document Object Model</strong></h2>
+            </p>
+            <p>55555555555<img src="./arvore.jpg" alt="" width="250"></p>
+         </div>
+         <div>
+            <p>6666666666666
+               <img src="./Select_Marca.jpg" alt="" width="250">
+               <img src="./Select_Id.jpg" alt="" width="250">
+               <img src="./Select_Name.jpg" alt="" width="250">
+               <img src="./Select_Class.jpg" alt="" width="250">
+               <img src="./Select_Query.jpg" alt="" width="250"> 
+            </p>
+         </div>
+      </section>
+   </main>
+
+
+   <footer>
+      <div>
+         <p>7777777777777
+         <h6>Aula de Introdução ao <strong>DOM</strong></h6>
+         </p>
+      </div>
+   </footer>
+
+   <script>
+
+      var oPgfLst = document.getElementsByTagName('p')[6]
+      var oFont_H1 = document.getElementsByTagName('h1')
+      var oFont_H2 = document.getElementsByTagName('h2')
+      var oFont_H3 = document.getElementsByTagName('h3')
+      var oFont_H4 = document.getElementsByTagName('h4')
+      var oFont_H5 = document.getElementsByTagName('h5')
+      var oFont_H6 = document.getElementsByTagName('h6')
+      var oDivLst = document.querySelectorAll('div')
+      var oSecLst = document.querySelectorAll('#SecImg')
+      var oCabFoo = document.querySelectorAll('header, footer')
+
+      window.alert(`Quantidade de elementos DIV = ${oDivLst.length}`)
+      window.alert(`Quantidade de elementos H2 = ${oFont_H2.length}`)
+
+      oDivLst[2].style.backgroundColor = 'white'
+      oDivLst[2].style.color = 'black'
+      oDivLst[2].style.fontSize = '3em'
+      oDivLst[2].innerHTML = 'Alterando o texto do elemento utilizando JavaScript' 
+
+      oSecLst[0].style.backgroundColor = 'black'
+
+      oCabFoo[0].style.backgroundColor = 'pink'
+      oCabFoo[1].style.backgroundColor = 'orange'
+
+      oPgfLst.style.color = 'red'
+      oPgfLst.style.fontWeight = 'bold'
+      oPgfLst.style.backgroundColor = 'yellow'
+
+      oFont_H1[0].style.color = 'aqua'
+
+      oFont_H2[0].style.color = 'red'
+      oFont_H2[0].style.fontFamily = 'arial'
+      oFont_H2[0].style.fontSize = '2em'
+
+      oFont_H3[0].style.color = 'aqua'
+      /*
+            oFont_H4[0].style.color = 'aqua'
+      
+            oFont_H5[0].style.color = 'aqua'
+      */
+      oFont_H6[0].style.color = 'aqua'
+      oFont_H6[0].style.fontFamily = 'arial'
+      oFont_H6[0].style.fontSize = '15px'
+      oFont_H6[0].style.padding = '5px'
+      oFont_H6[0].style.margin = '5px'
+
+   </script>
+
+</body>
+
+</html>

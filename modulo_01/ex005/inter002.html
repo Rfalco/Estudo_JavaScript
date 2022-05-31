@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="../../storage_images/encode/icon_encode.ico" type="image/x-icon">
+   <title>Interação JS</title>
+
+   <style>
+      /* ----------- elementos ----------- */
+      body {
+         font-size: 1em;
+         color: #008000;
+         font-family: Arial, Helvetica, sans-serif;
+         background-color: #f08080;
+      }
+
+      h1 {
+         font-size: 2em;
+         color: #4b0082;
+      }
+
+      h6 {
+         font-size: 0.5em;
+         color: #4b0082;
+      }
+
+
+      /* ----------- classes ----------- */
+
+
+
+      /* ----------- id ----------- */
+      #btn001 {
+         font-size: 1.5em;
+         padding: 30px;
+         background-color: #ff00ff;
+      }
+   </style>
+
+</head>
+
+<body>
+
+   <header>
+      <div>
+         <p>
+         <h1>Interação com o Usuário</h1>
+         </p>
+      </div>
+   </header>
+
+   <main>
+      <section>
+         <div>
+            <p><button id="btn001" onclick="fClicou()">Clique Aqui!</button></p>
+         </div>
+      </section>
+   </main>
+
+   <footer>
+      <div>
+         <p>
+         <h6>Exercício 004 - PDF</h6>
+         </p>
+      </div>
+   </footer>
+
+   <script>
+
+      function fClicou() {
+         var sNome = window.prompt('Qual é o seu nome?')
+         var oBtnSet = document.getElementById('btn001')
+         window.alert(`Olá, ${sNome}! É um prazer te conhecer!`)
+         oBtnSet.style.backgroundColor = '#ffffff'
+         oBtnSet.style.color = '#0000ff'
+         oBtnSet.style.boxShadow = '5px 5px 5px #00ff00'
+         oBtnSet.style.padding = '30px'
+         oBtnSet.innerHTML = 'Clicou!'
+      }
+   </script>
+
+</body>
+
+</html>

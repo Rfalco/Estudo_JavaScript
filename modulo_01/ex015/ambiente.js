@@ -1,7 +1,9 @@
 // ======================================================================
 // **********  PARA EXECUTAR ESTE ARQUIVO DIRETO PELO VSCODE COM NODEJS
-// **********************   CLIQUE EM ( CRTL + ALT + N )  
+// **********************   CLIQUE EM F8 ----  ( CRTL + ALT + N )
 // ======================================================================
+// https://www.youtube.com/watch?v=5rZqYPKIwkY&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&index=23&ab_channel=CursoemV%C3%ADdeo
+// https://www.youtube.com/watch?v=XdkW62tkAgU&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&index=29&ab_channel=CursoemV%C3%ADdeo
 // ======================================================================
 
 let nI = 0

@@ -41,23 +41,9 @@ header .imglog {
     position: relative;
 }
 
-header .titlog {
-    position: relative;
-    font-size: 2em;
-    color: white;
-    font-weight: 700;
-}
-
 header .lnklog {
     text-decoration: none;
     color: white;
-}
-
-header .txtlog {
-    position: relative;
-    font-size: 0.8em;
-    color: white;
-    font-weight: 500;
 }
 
 header .toggle {
@@ -98,14 +84,6 @@ main {
     z-index: 100;
 }
 
-main .txtcpo {
-    position: relative;
-    font-size: 1em;
-    color: white;
-    font-weight: 500;
-    padding-top: 45px;
-}
-
 footer {
     position: absolute;
     top: 0;
@@ -122,4 +100,156 @@ footer .txtrdp {
     font-size: 0.8em;
     color: white;
     font-weight: 500;
+}
+
+
+
+
+
+
+@media screen and (min-width:300px) {
+    .imglog img {
+        max-width: 30px;
+        max-height: 30px;
+        width: auto;
+        height: auto;
+    }
+
+    header .titlog {
+        position: relative;
+        font-size: 0.8em;
+        color: white;
+        font-weight: 700;
+    }
+
+    header .txtlog {
+        position: relative;
+        font-size: 0.6em;
+        color: white;
+        font-weight: 500;
+    }
+}
+
+@media screen and (min-width:500px) {
+    .imglog img {
+        max-width: 50px;
+        max-height: 50px;
+        width: auto;
+        height: auto;
+    }
+
+    header .titlog {
+        position: relative;
+        font-size: 0.8em;
+        color: white;
+        font-weight: 700;
+    }
+
+    header .txtlog {
+        position: relative;
+        font-size: 0.6em;
+        color: white;
+        font-weight: 500;
+    }
+
+    main .txtcpo {
+        position: relative;
+        font-size: 0.5em;
+        color: white;
+        font-weight: 500;
+        padding-top: 45px;
+    }
+}
+
+@media screen and (min-width:700px) {
+    .imglog img {
+        max-width: 70px;
+        max-height: 70px;
+        width: auto;
+        height: auto;
+    }
+
+    header .titlog {
+        position: relative;
+        font-size: 1em;
+        color: white;
+        font-weight: 700;
+    }
+
+    header .txtlog {
+        position: relative;
+        font-size: 0.8em;
+        color: white;
+        font-weight: 500;
+    }
+
+    main .txtcpo {
+        position: relative;
+        font-size: 0.8em;
+        color: white;
+        font-weight: 500;
+        padding-top: 45px;
+    }
+}
+
+@media screen and (min-width:900px) {
+    .imglog img {
+        max-width: 90px;
+        max-height: 90px;
+        width: auto;
+        height: auto;
+    }
+
+    header .titlog {
+        position: relative;
+        font-size: 1.5em;
+        color: white;
+        font-weight: 700;
+    }
+
+    header .txtlog {
+        position: relative;
+        font-size: 1em;
+        color: white;
+        font-weight: 500;
+    }
+
+    main .txtcpo {
+        position: relative;
+        font-size: 1em;
+        color: white;
+        font-weight: 500;
+        padding-top: 45px;
+    }
+}
+
+@media screen and (min-width:1100px) {
+    .imglog img {
+        max-width: 150px;
+        max-height: 150px;
+        width: auto;
+        height: auto;
+    }
+
+    header .titlog {
+        position: relative;
+        font-size: 2em;
+        color: white;
+        font-weight: 700;
+    }
+
+    header .txtlog {
+        position: relative;
+        font-size: 1em;
+        color: white;
+        font-weight: 500;
+    }
+
+    main .txtcpo {
+        position: relative;
+        font-size: 1em;
+        color: white;
+        font-weight: 500;
+        padding-top: 45px;
+    }
 }

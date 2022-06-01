@@ -1,7 +1,8 @@
 // ======================================================================
 // **********  PARA EXECUTAR ESTE ARQUIVO DIRETO PELO VSCODE COM NODEJS
-// **********************   CLIQUE EM ( CRTL + ALT + N )  
+// **********************   CLIQUE EM F8 ------------ ( CRTL + ALT + N )
 // ======================================================================
+// https://www.youtube.com/watch?v=mc3TKp2XzhI&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&index=30&ab_channel=CursoemV%C3%ADdeo
 // ======================================================================
 
 function fParImp(nValPar) {

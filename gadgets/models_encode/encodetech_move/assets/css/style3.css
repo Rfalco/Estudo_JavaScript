@@ -102,11 +102,8 @@ footer .txtrdp {
     font-weight: 500;
 }
 
-
-
-
-
-
+/************************************************************************/
+/* smartphones, iPhone, portrait 480x320 phones */
 @media screen and (min-width:300px) {
     .imglog img {
         max-width: 30px;
@@ -130,6 +127,7 @@ footer .txtrdp {
     }
 }
 
+/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
 @media screen and (min-width:500px) {
     .imglog img {
         max-width: 50px;
@@ -161,6 +159,7 @@ footer .txtrdp {
     }
 }
 
+/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
 @media screen and (min-width:700px) {
     .imglog img {
         max-width: 70px;
@@ -192,6 +191,7 @@ footer .txtrdp {
     }
 }
 
+/* tablet, landscape iPad, lo-res laptops ands desktops */
 @media screen and (min-width:900px) {
     .imglog img {
         max-width: 90px;
@@ -223,6 +223,7 @@ footer .txtrdp {
     }
 }
 
+/* big landscape tablets, laptops, and desktops */
 @media screen and (min-width:1100px) {
     .imglog img {
         max-width: 150px;
@@ -253,3 +254,42 @@ footer .txtrdp {
         padding-top: 45px;
     }
 }
+
+
+@media print {}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) {}
+
+/* 
+
+https://www.alura.com.br/artigos/flexibilidade-em-paginas-para-dispositivos-moveis-com-media-queries?gclid=CjwKCAjwv-GUBhAzEiwASUMm4iAIkUx3UljqUhfd5wBO-AXEs1IqKn-pmi7gbDKJhY4hhMnvjCxCLRoCyH8QAvD_BwE 
+
+https://www.w3schools.com/css/css3_mediaqueries_ex.asp
+
+*/
+
+/* @media (min-width:320px) { */
+    /* smartphones, iPhone, portrait 480x320 phones */
+/* } */
+
+/* @media (min-width:481px) { */
+    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+/* } */
+
+/* @media (min-width:641px) { */
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+/* } */
+
+/* @media (min-width:961px) { */
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+/* } */
+
+/* @media (min-width:1025px) { */
+    /* big landscape tablets, laptops, and desktops */
+/* } */
+
+/* @media (min-width:1281px) { */
+    /* hi-res laptops and desktops */
+/* } */

@@ -12,7 +12,6 @@
 
 <body>
 
-
     <section>
         <header>
             <div class="toggle" onclick="menuToggle();"></div>
@@ -23,6 +22,17 @@
             </div>
         </header>
         <video src="./videos/Hyper Space 2-1.m4v" autoplay muted loop></video>
+        <ul class="sci">
+            <li style="--i:1"> <a href="#">Facebook</a></li>
+            <li style="--i:2"> <a href="#">Twitter</a></li>
+            <li style="--i:3"> <a href="#">Instagran</a></li>
+        </ul>
+        <ul class="navigation">
+            <li style="--i:1"><a href="index4.html">Home</a></li>
+            <li style="--i:2"><a href="about4.html">Quem Somos</a></li>
+            <li style="--i:3"><a href="#">Tour</a></li>
+            <li style="--i:4"><a href="#">Contact</a></li>
+        </ul>
 
         <main>
             <article>
@@ -49,7 +59,9 @@
     <script>
         function menuToggle() {
             const toggleMenu = document.querySelector('.toggle');
+            const section = document.querySelector('section');
             toggleMenu.classList.toggle('active');
+            section.classList.toggle('active');
         }
     </script>
 

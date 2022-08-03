@@ -29,8 +29,21 @@ window.onload = function () {
             /// POSIÇÃO INICIAL DO TOP E LEFT
             neo.getContext("2d").fillRect(0, 0, width, height);
 
-            /// COR DOS CARACTERES
-            neo.getContext("2d").fillStyle = "#FD0";
+            /// COR DOS CARACTERES *******************************
+            let oAtS = new Date().getSeconds();
+            if (oAtS >= 00 && oAtS <= 09) {
+                neo.getContext("2d").fillStyle = "#FFF";    /// BRANCO
+            } else if (oAtS >= 10 && oAtS <= 19) {
+                neo.getContext("2d").fillStyle = "#FF0";    /// AMARELO
+            } else if (oAtS >= 20 && oAtS <= 29) {
+                neo.getContext("2d").fillStyle = "#F00";    /// VERMELHO
+            } else if (oAtS >= 30 && oAtS <= 39) {
+                neo.getContext("2d").fillStyle = "#0FF";    /// AZUL
+            } else if (oAtS >= 40 && oAtS <= 49) {
+                neo.getContext("2d").fillStyle = "#0F0";    /// VERDE
+            } else if (oAtS >= 50 && oAtS <= 59) {
+                neo.getContext("2d").fillStyle = "#F0F";    /// VIOLETA
+            }
 
             letters.map(function (position_y, index) {
 

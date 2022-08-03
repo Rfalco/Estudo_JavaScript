@@ -1,0 +1,94 @@
+@charset 'UTF-8';
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    /* utilizado para alinhar na vertical em conjunto */
+    align-items: center;
+    /* a linha de cima é necessária */
+    justify-content: center;
+    background-color: #2f363e;
+}
+
+#time {
+    display: flex;
+    gap: 40px;
+    color: #ffffff;
+
+    background-color: teal;
+}
+
+#time .circle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: cornflowerblue;
+}
+
+#time div {
+    position: absolute;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 500;
+
+    background-color: chartreuse;
+}
+
+#time .ap {
+    position: relative;
+    font-size: 1em;
+    transform: translateX(-20px);
+}
+
+#time .circle svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(270deg);
+}
+
+#time .circle svg circle {
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke: #191919;
+    stroke-width: 4;
+    transform: translate(5px, 5px);
+}
+
+#time .circle svg circle:nth-child(2) {
+    stroke: var(--clr);
+    stroke-dasharray: 440;
+}
+
+
+
+
+#hours {
+    /* background-color: deeppink; */
+}
+
+#minutes {
+    /* background-color: yellow; */
+}
+
+#seconds {
+    /* background-color: greenyellow; */
+}
+
+#ampm {
+    /* background-color: aqua; */
+}

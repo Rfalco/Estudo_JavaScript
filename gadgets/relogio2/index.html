@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/images/encode/icon_encode.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Relógio 2</title>
+</head>
+
+<body>
+
+    <div id="time">
+        <div class="circle" style="--clr:#ff2972;">
+            <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70" id="hrs"></circle>
+            </svg>
+            <div id="hours">00</div>
+        </div>
+        <div class="circle" style="--clr:#fee800;">
+            <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70" id="min"></circle>
+            </svg>
+            <div id="minutes">00</div>
+        </div>
+        <div class="circle" style="--clr:#7fff29;">
+            <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70" id="sec"></circle>
+            </svg>
+            <div id="seconds">00</div>
+        </div>
+        <div class="ap">
+            <div id="ampm">AM</div>
+        </div>
+    </div>
+
+    <script>
+        setInterval(() => {
+
+            let oHrs = document.getElementById('hours');
+            let oMin = document.getElementById('minutes');
+            let oSec = document.getElementById('seconds');
+            let oAmP = document.getElementById('ampm');
+
+            let oHhh = document.getElementById('hrs');
+            let oMmm = document.getElementById('min');
+            let oSss = document.getElementById('sec');
+
+
+            let oAtH = new Date().getHours();
+            let oAtM = new Date().getMinutes();
+            let oAtS = new Date().getSeconds();
+
+            if (oAtH > 12) {
+                oAtH = oAtH - 12
+            }
+
+            oHrs.innerHTML = (oAtH < 10) ? '0' + oAtH : oAtH;
+            oMin.innerHTML = (oAtM < 10) ? '0' + oAtM : oAtM;
+            oSec.innerHTML = (oAtS < 10) ? '0' + oAtS : oAtS;
+            oAmP.innerHTML = (oAtH < 12) ? 'PM' : 'AM';
+
+            if (oAtH > 12) {
+                oAtH = (oAtH - 12)
+            }
+
+            oHhh.style.strokeDashoffset = 440 - (440 * oAtH) / 12;
+            oMmm.style.strokeDashoffset = 440 - (440 * oAtM) / 60;
+            oSss.style.strokeDashoffset = 440 - (440 * oAtS) / 60;
+
+        });
+
+    </script>
+
+</body>
+
+</html>

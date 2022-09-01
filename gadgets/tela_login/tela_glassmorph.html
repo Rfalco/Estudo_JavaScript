@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style3.css">
+    <link rel="shortcut icon" href="../z_images/encode/logo_cubo_amarelo.ico" type="image/x-icon">
+    <title>GlassMorphism</title>
+
+    <!-- 
+    https://www.youtube.com/watch?v=i0HKG2om_C4&ab_channel=OnlineTutorials
+    https://www.youtube.com/watch?v=W9XEARppU8s&t=40s&ab_channel=OnlineTutorials
+    -->
+
+</head>
+
+<body>
+
+    <div class="container">
+        <ul class="thumb">
+            <li onmouseover="changeImageSrc('assets/images/body_site/shoes1.png')"><img
+                    src="assets/images/body_site/shoes1.png" alt=""></li>
+            <li onmouseover="changeImageSrc('assets/images/body_site/shoes2.png')"><img
+                    src="assets/images/body_site/shoes2.png" alt=""></li>
+            <li onmouseover="changeImageSrc('assets/images/body_site/shoes3.png')"><img
+                    src="assets/images/body_site/shoes3.png" alt=""></li>
+        </ul>
+        <div class="imgBox">
+            <h2>Nike Air Zoom</h2>
+            <img src="assets/images/body_site/shoes1.png" class="shoesss">
+            <ul class="size">
+                <span>Size</span>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>10</li>
+            </ul>
+            <a href="#" class="btn">Adicionar Carrinho</a>
+        </div>
+    </div>
+
+    <script>
+        function changeImageSrc(anything) {
+            document.querySelector('.shoesss').src = anything;
+        }
+    </script>
+
+</body>
+
+</html>

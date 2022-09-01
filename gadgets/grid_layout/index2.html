@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../z_images/encode/logo_cubo_amarelo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/style2.css">
+    <title>FlexBox ou Grid</title>
+
+    <!-- 
+    https://www.youtube.com/watch?v=HN1UjzRSdBk&ab_channel=Rocketseat
+
+    ## GRID
+    - Bidimensional
+    - Divisão de toda a página em linhas e colunas
+    - Colocar elementos onde quiser nessa divisão
+
+    ## FLEXBOX
+    - Unidimensional
+    - Divisão somente por coluna ou por linhas
+
+    ## GRID ou FLEXBOX
+    - Grid => trabalha com linhas e colunas
+    - FlexBox => Somete linha ou coluna por vez
+    - No geral um complementa o trabalho do outro
+
+    ## PROPRIEDADES
+        Vamos separar em dois grupos
+        - CONTAINER e ITEM(s)
+
+        == CONTAINER
+        display: grid;
+        grid-template-columns;
+        grid-template-rows;
+        grid-gap
+            grid-row-gap;
+            grid-column-gap;
+        grid-template-areas;
+        e mais 4 propriedades e **alinhamento**
+
+        ==ITEM(s)
+        grid-column-gap
+            grid-column-start
+            grid-column-end
+        grid-row
+            grid-row-start
+            grid-row-end
+        grid-template-areas
+        e mais 2 propriedades de **alinhamento
+
+
+    ## ALINHAMENTOS
+    1. justify-content
+    2. align-content
+    3. justify-items
+    4. align-items
+    5. justify-self
+    6. align-self
+
+    Vamos separá-los em 2 grupos
+    1. justify e align
+    2. content, items e self
+
+        == Justify e Align: Sabendo que o grid é bidimensional, nós temos eixo X e Y
+            **Eixo X = Posicionamento Horizontal (Esquerda p/ Direita)
+            **Eixo Y = Posicionamento Vertical (De cima p/ Baixo)
+
+        == Content, Items e Self: Em conjunto com Justify ou Align, observamos as propriedades
+
+        == CONTENT: justify-content e align-content, nos permite alinhar o próprio grid, relativo ao espaço fora do grid
+            grid-template-columns: 90px 90px 90px;
+            grid-template-rows: 90px 90px 90px;
+        start
+        end
+        center
+        stretch
+        space-around
+        space-between
+        space-evenly
+
+
+        == ITEMS: justify-items e align-items
+
+
+     -->
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header></header>
+
+        <main>
+            <section class="contsec">
+                <div class="proprio"></div>
+                <div></div>
+                <div></div>
+
+                <div></div>
+                <div class="proprio"></div>
+                <div></div>
+
+                <div></div>
+                <div></div>
+                <div class="proprio"></div>
+            </section>
+
+        </main>
+
+        <aside></aside>
+
+        <footer></footer>
+
+    </div>
+
+</body>
+
+</html>

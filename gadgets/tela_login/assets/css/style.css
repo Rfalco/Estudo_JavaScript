@@ -1,0 +1,100 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Ubuntudisplay=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #454d6b;
+    /* background: linear-gradient(120deg, #9e9ceb, #f1f0a4); */
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Raleway', sans-serif;
+}
+
+.card {
+    padding: 40px;
+    width: 280px;
+    border-radius: 2px;
+    /* background-color: gray; */
+    background-color: rgba(19, 19, 19, 0.3);
+}
+
+.card-header {
+    padding-bottom: 50px;
+    opacity: 0.7;
+    color: #fff;
+}
+
+.card-header::after {
+    content: '';
+    height: 1px;
+    width: 70px;
+    display: block;
+    margin-top: -17px;
+    margin-left: -5px;
+    background-color: #fff;
+}
+
+.card-content label {
+    opacity: 0.8;
+    color: #fff;
+    font-size: 0.75em;
+}
+
+.card-content-area {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content-area input {
+    padding: 0 5px;
+    margin-top: 10px;
+    color: #fff;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.card-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-footer .submit {
+    width: 100%;
+    height: 40px;
+    border: none;
+    margin: 10px 0;
+    color: #e1e1e1;
+    background-color: #a13854;
+}
+
+.card-footer a {
+    opacity: 0.8;
+    color: #fff;
+    font-size: 0.75em;
+    text-align: center;
+    text-decoration: none;
+}

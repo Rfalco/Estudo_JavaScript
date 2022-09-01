@@ -1,0 +1,111 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Ubuntu:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Ubuntu+Mono:wght@700&family=Ubuntu:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&family=Lobster&family=Ubuntu+Mono:wght@700&family=Ubuntu:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&family=Courgette&family=Lobster&family=Ubuntu+Mono:wght@700&family=Ubuntu:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+    background-color: #7159c1;
+}
+
+
+
+/*  - PRIMEIRO PASSO: INICIAR O GRID   */
+.container {
+    display: grid;
+    /* dividindo em colunas 3 frações e 1 fração*/
+    grid-template-columns: 3fr 1fr;
+    /* definindo a altura das linhas */
+    grid-template-rows: 20vh 70vh 10vh;
+    /* determinar as áreas do grid, caso desejar ignorar alguma area coloque . no lugar*/
+    grid-template-areas: "header header""main aside""footer footer";
+
+    /* Caso desejar ignorar alguma area coloque . no lugar*/
+    /* grid-template-areas: "header header""main ."". footer"; */
+
+}
+
+header {
+    background-color: #fdfdb6;
+    grid-area: header;
+}
+
+main {
+    background-color: #a2a2fa;
+    grid-area: main;
+}
+
+aside {
+    background-color: #b2f5b2;
+    grid-area: aside;
+}
+
+footer {
+    background-color: #f89797;
+    grid-area: footer;
+}
+
+
+section {
+    box-sizing: border-box;
+    border: 5px solid #cacaca;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: #c159b8; */
+}
+
+.contsec {
+    background-color: #74d5fc;
+    /* width: 100vw; */
+    /* height: 100vh; */
+    display: grid;
+    grid-gap: 5px;
+
+    /* podemos utilizar px para determinar o tamanho caso seja específico*/
+    grid-template-columns: 90px 90px 90px;
+    grid-template-rows: 90px 90px 90px;
+    /* ou utilizamos fr que será por fração e o grid o cupará 100% do espaço */
+    /* estando ligado a quantidade, neste caso, de DIVs 9/3, 10/5, 6/2 */
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* grid-template-rows: 1fr 1fr 1fr; */
+    justify-content: space-between;
+    align-content: space-between;
+
+    /* justify-content: space-between; */
+    /* align-content: space-between; */
+}
+
+.contsec div {
+    background-color: #13b4b4;
+    /* nesta solução justify-items align-items */
+    /* width: 50%; */
+    /* height: 50%; */
+}
+
+/* para este funcionar o justify e align (content ou items) não podem estar ativos */
+.proprio {
+    /* justify-self: center; */
+    /* align-self: center; */
+
+}
+
+
+/* use viewport-relative units to cover page fully */
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+/*  */
+/* #slider img { */
+/* height: calc(100vh); */
+/* width: calc(100vw); */
+/* } */
